@@ -1,1124 +1,518 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glory Asia Energy - Advanced Oil & Gas Engineering Services</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Tailwind Configuration -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandNavy: '#183058',
-            brandOrange: '#F29631',
-            brandBlue: '#5176A2',
-          },
-          animation: {
-            'bounce-slow': 'bounce 3s infinite',
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Custom Scroll Reveal & Utilities Styles -->
-  <style>
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(16px);
-    }
-  </style>
-</head>
-<body class="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-[#F29631] selection:text-white">
-
-  <!-- Navigation Header -->
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-12">
-        
-        <!-- Logo -->
-        <a href="#" class="flex items-center space-x-2 group">
-          <div class="transform group-hover:scale-105 transition-transform duration-300">
-            <img src="/favicon.svg" onerror="this.onerror=null; this.src='https://placehold.co/40x40/183058/F29631?text=GAE';" alt="Glory Asia Energy" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-md" />
-          </div>
-          <div class="flex items-center ml-2 space-x-1.5 sm:space-x-2">
-            <span id="nav-brand-1" class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-white">GLORY ASIA</span>
-            <span class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-[#F29631]">ENERGY</span>
-          </div>
-        </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex space-x-5 items-center">
-          <a href="#about" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">About Us</a>
-          <a href="#expertise" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">Expertise</a>
-          <a href="#cases" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">Track Record</a>
-          <a href="#consortium" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">Consortium</a>
-          <a href="#team" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">Team</a>
-          <a href="#gallery" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">Gallery</a>
-          <a href="#workpack" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-[#F29631] text-slate-200">Workpacks</a>
-          <a href="#contact" class="bg-[#F29631] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-orange-600 transition-all shadow-md hover:shadow-orange-500/40 hover:-translate-y-0.5">
-            Partner With Us
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden flex items-center">
-          <button id="mobile-menu-btn" class="focus:outline-none transition-colors text-white p-1">
-            <i data-lucide="menu" id="menu-icon-open" class="w-7 h-7"></i>
-            <i data-lucide="x" id="menu-icon-close" class="w-7 h-7 hidden"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl mt-2 pb-4 px-4">
-      <div class="flex flex-col space-y-1 mt-2 text-center">
-        <a href="#about" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">About Us</a>
-        <a href="#expertise" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Core Expertise</a>
-        <a href="#cases" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Track Record</a>
-        <a href="#consortium" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Consortium</a>
-        <a href="#team" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Team</a>
-        <a href="#gallery" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Gallery</a>
-        <a href="#workpack" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Workpacks</a>
-        <a href="#contact" class="mobile-link block mt-2 bg-[#183058] text-white px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-blue-900 transition-colors shadow-sm">Partner With Us</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-[#183058]">
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5176A2]/30 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-pulse"></div>
-    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F29631]/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glory Asia Energy</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     
-    <div class="absolute inset-0 z-0">
-      <img 
-        src="/firstpage.png" 
-        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80';"
-        alt="Industrial Energy" 
-        class="w-full h-full object-cover opacity-40"
-      />
-      <div class="absolute inset-0 bg-gradient-to-br from-[#183058] via-[#183058]/95 to-transparent"></div>
-    </div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16">
-      <div class="reveal max-w-3xl">
-        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
-          <span class="w-2 h-2 rounded-full bg-[#F29631] animate-ping"></span>
-          <span class="w-2 h-2 rounded-full bg-[#F29631] absolute"></span>
-          <span class="pl-2">Best Available Technology (BAT)</span>
-        </div>
-        
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-          Glory Asia <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-yellow-400 drop-shadow-sm">Energy</span>
-        </h1>
-        
-        <p class="text-base md:text-xl text-blue-100/80 mb-10 leading-relaxed font-light max-w-2xl">
-          Empowering Global Energy Transformation through Mineral Resource Development & Advanced Oil &
-Gas Engineering Services. Led by Founder & Group President, Mr. David Xu-driven by "Technology-
-Enabled, Green-Driven, Value-Creating" core concepts.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#expertise" class="inline-flex items-center justify-center bg-[#F29631] text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(242,150,49,0.3)] hover:shadow-[0_0_30px_rgba(242,150,49,0.5)] hover:-translate-y-0.5">
-            Explore Solutions <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
-          </a>
-          <a href="#consortium" class="inline-flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider border border-white/30 hover:border-white hover:bg-white/10 transition-all">
-            Our Partnerships
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Bar -->
-  <section class="relative -mt-12 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="reveal">
-      <div class="bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 p-6 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-        
-        <div class="flex items-center space-x-4 px-2 group cursor-default">
-          <div class="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-50 rounded-xl flex items-center justify-center text-[#F29631] flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
-            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <p class="text-2xl font-black text-[#183058] leading-none mb-1">&gt;30M</p>
-            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Tonnes of Reserves (Fluorite, Pb-Zn, etc.)</p>
-          </div>
-        </div>
-        
-        <div class="flex items-center space-x-4 px-2 pt-4 md:pt-0 group cursor-default">
-          <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center text-[#5176A2] flex-shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 shadow-inner">
-            <i data-lucide="globe-2" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <p class="text-2xl font-black text-[#183058] leading-none mb-1">&gt;20B</p>
-            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">RMB Corporate Valuation</p>
-          </div>
-        </div>
-        
-        <div class="flex items-center space-x-4 px-2 pt-4 md:pt-0 group cursor-default">
-          <div class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
-            <i data-lucide="award" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <p class="text-2xl font-black text-[#183058] leading-none mb-1">36</p>
-            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Technical Patents (40% Inventions)</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about" class="py-20 bg-slate-50 relative overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-[0.03]" style="background-image: radial-gradient(#183058 1px, transparent 1px); background-size: 32px 32px;"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        
-        <!-- Left Image Collage -->
-        <div class="reveal relative h-[450px] hidden lg:block">
-          <div class="absolute top-0 left-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-10 hover:-translate-y-1 transition-transform duration-500 group">
-            <img 
-              src="/1.jpeg" 
-              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80';"
-              alt="Engineering Technology" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-tr from-[#183058]/40 to-transparent"></div>
-          </div>
-          <div class="absolute bottom-0 right-0 w-[60%] h-[60%] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-20 hover:-translate-y-1 transition-transform duration-500 group">
-            <img 
-              src="/5.jpeg" 
-              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80';"
-              alt="Industrial Machinery" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-          
-          <div class="absolute top-[40%] right-2 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg z-30 flex items-center space-x-3 animate-bounce-slow">
-            <div class="bg-emerald-100 p-2.5 rounded-lg">
-              <i data-lucide="shield-check" class="text-emerald-600 w-6 h-6"></i>
-            </div>
-            <div>
-              <p class="font-black text-[#183058] text-base leading-none mb-1">Safety First</p>
-              <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Zero Incidents</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Text Content -->
-        <div>
-          <div class="reveal">
-            <div class="inline-block bg-orange-100 px-3 py-1.5 rounded-full mb-4">
-              <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-[10px]">Strategic Vision</h2>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-6 leading-tight tracking-tight">
-              Global Leader in <br/> Energy & Resources
-            </h3>
-            
-            <p class="text-slate-600 mb-4 leading-relaxed text-sm md:text-base">
-              Glory Asia Energy (GAE) is a <strong>Malaysia-Listed Multinational Corporation</strong> consistently innovating at the forefront of the global energy transition. Our strategic maneuvers are guided by our core corporate philosophy: <em>"Technology-Empowered, Green-Driven, Value-Creating."</em>
-            </p>
-            <p class="text-slate-600 mb-4 leading-relaxed text-sm md:text-base">
-              Through our <strong>'Dual-Wheel' Strategy</strong>, we synergize Mineral Resources Development and Oil & Gas (O&G) Engineering Services to create robust market stability and excellence.
-            </p>
-            <p class="text-slate-600 mb-6 leading-relaxed text-sm md:text-base">
-              We remain steadfast in our commitment to driving Indonesia's ambitious national energy targets of achieving <strong>1 million bpd</strong> and <strong>12 BSCFD</strong> by 2030.
-            </p>
-          </div>
-          
-          <div class="space-y-4">
-            <div class="reveal flex items-start bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-              <div class="bg-orange-50 p-2.5 rounded-lg mr-4 mt-1">
-                <i data-lucide="handshake" class="text-[#F29631] w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="font-black text-[#183058] text-base mb-1">Risk-Aligned Partnerships</h4>
-                <p class="text-slate-500 text-xs md:text-sm leading-relaxed">A "No Cure, No Pay" commercial model, bearing project risks to ensure operator confidence.</p>
-              </div>
-            </div>
-            
-            <div class="reveal flex items-start bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-              <div class="bg-blue-50 p-2.5 rounded-lg mr-4 mt-1">
-                <i data-lucide="settings" class="text-[#5176A2] w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="font-black text-[#183058] text-base mb-1">Technology Stewardship</h4>
-                <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Deploying Best Available Technology (BAT) that reduces carbon footprint and limits human toxic exposure.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Expertise Section -->
-  <section id="expertise" class="py-20 bg-white relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-block bg-orange-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-[10px]">Integrated Value Chain</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4 tracking-tight">Our Core Expertise</h3>
-        <p class="text-slate-600 text-base leading-relaxed">
-          Leveraging nano-chemical and mechanical innovations to outperform conventional methods across three high-impact domains.
-        </p>
-      </div>
-
-      <div class="grid lg:grid-cols-3 gap-6">
-        
-        <!-- Expertise Card 1 -->
-        <div class="reveal group bg-slate-50 rounded-2xl border border-slate-100 shadow-md hover:shadow-xl transition-all overflow-hidden flex flex-col hover:-translate-y-2 duration-300">
-          <div class="h-48 overflow-hidden relative">
-            <img 
-              src="/ce1.jpeg" 
-              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80';"
-              alt="Well Rejuvenation" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#183058] via-[#183058]/30 to-transparent"></div>
-            <div class="absolute bottom-4 left-4 w-10 h-10 bg-[#F29631] text-white rounded-xl flex items-center justify-center shadow-md transform group-hover:rotate-12 transition-transform duration-300">
-              <i data-lucide="zap" class="w-5 h-5"></i>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col bg-white">
-            <h4 class="text-lg font-black text-[#183058] mb-3 leading-tight">Brownfield Well Rejuvenation</h4>
-            <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-1">
-              Deploying smart rodless plunger pumps and nano-chemical stimulation to surpass traditional workover limitations.
-            </p>
-            <div class="space-y-2.5 pt-4 border-t border-slate-100 text-xs">
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-[#F29631] mr-2.5 w-4 h-4"></i> 40% Lower Mobilization Costs</div>
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-[#F29631] mr-2.5 w-4 h-4"></i> Rapid Flow Activation in Days</div>
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-[#F29631] mr-2.5 w-4 h-4"></i> Cloud-Based Digital Control</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Expertise Card 2 -->
-        <div class="reveal group bg-slate-50 rounded-2xl border border-slate-100 shadow-md hover:shadow-xl transition-all overflow-hidden flex flex-col hover:-translate-y-2 duration-300">
-          <div class="h-48 overflow-hidden relative">
-            <img 
-              src="/ce2.jpeg" 
-              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541888946425-d0fbb186a5b2?auto=format&fit=crop&w=600&q=80';"
-              alt="Pipeline Rejuvenation" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#183058] via-[#183058]/30 to-transparent"></div>
-            <div class="absolute bottom-4 left-4 w-10 h-10 bg-[#5176A2] text-white rounded-xl flex items-center justify-center shadow-md transform group-hover:rotate-12 transition-transform duration-300">
-              <i data-lucide="activity" class="w-5 h-5"></i>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col bg-white">
-            <h4 class="text-lg font-black text-[#183058] mb-3 leading-tight">Pipeline Asset Rejuvenation</h4>
-            <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-1">
-              Integrated 50°C nano-chemical and mechanical cleaning technology that dissolves wax to restore pipeline throughput.
-            </p>
-            <div class="space-y-2.5 pt-4 border-t border-slate-100 text-xs">
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-[#5176A2] mr-2.5 w-4 h-4"></i> Restores &gt;90% Capacity</div>
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-[#5176A2] mr-2.5 w-4 h-4"></i> 10-Year Life Extension</div>
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-[#5176A2] mr-2.5 w-4 h-4"></i> Eliminates Trucking Logistics</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Expertise Card 3 -->
-        <div class="reveal group bg-slate-50 rounded-2xl border border-slate-100 shadow-md hover:shadow-xl transition-all overflow-hidden flex flex-col hover:-translate-y-2 duration-300">
-          <div class="h-48 overflow-hidden relative">
-            <img 
-              src="/ce3.png" 
-              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80';"
-              alt="Sludge Oil Recovery" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#183058] via-[#183058]/30 to-transparent"></div>
-            <div class="absolute bottom-4 left-4 w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-md transform group-hover:rotate-12 transition-transform duration-300">
-              <i data-lucide="droplet" class="w-5 h-5"></i>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col bg-white">
-            <h4 class="text-lg font-black text-[#183058] mb-3 leading-tight">Next-Generation Sludge Oil Recovery (SOR)</h4>
-            <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-1">
-              Utilizing closed-loop Crude Oil Washing (COW) and automated three-phase separation to turn hazardous waste into crude oil.
-            </p>
-            <div class="space-y-2.5 pt-4 border-t border-slate-100 text-xs">
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-emerald-500 mr-2.5 w-4 h-4"></i> &gt;95% Reusable Crude Oil Recovery</div>
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-emerald-500 mr-2.5 w-4 h-4"></i> 0% Personnel Inside Tanks</div>
-              <div class="flex items-center font-bold text-slate-700"><i data-lucide="check-circle-2" class="text-emerald-500 mr-2.5 w-4 h-4"></i> 70% Disposal Weight Reduction</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Track Record Section -->
-  <section id="cases" class="py-20 bg-slate-100 relative border-y border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="reveal text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#183058] font-bold tracking-widest uppercase text-[10px]">Proven Track Record</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4 tracking-tight">Performance & Case History</h3>
-        <p class="text-slate-600 text-base leading-relaxed">
-          Demonstrating operational excellence and high recovery rates across various mature energy infrastructure environments.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        
-        <div class="reveal bg-white rounded-2xl p-6 border border-slate-200 shadow-md">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
-            <span class="bg-[#F29631] text-white text-xs font-bold px-3 py-1 rounded-full">POD 1</span>
-            <i data-lucide="line-chart" class="text-slate-400 w-5 h-5"></i>
-          </div>
-          <h4 class="font-black text-[#183058] text-lg mb-1">Brownfield Well Rejuvenation</h4>
-          <p class="text-slate-500 text-xs mb-4 uppercase tracking-wider font-semibold">Idle Well Reactivation</p>
-          <div class="space-y-3 text-sm">
-            <p><strong class="text-slate-700">Target Fields:</strong> Zhundong, Jilin, and Changqing oil fields.</p>
-            <div class="bg-orange-50 p-3 rounded-lg border border-orange-100">
-              <strong class="text-[#F29631] block mb-1">Key Success Outcomes:</strong>
-              <span class="text-slate-700 font-medium">&gt;30% production increase per well, effective lifespan &gt;6 months.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal bg-white rounded-2xl p-6 border border-slate-200 shadow-md">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
-            <span class="bg-[#5176A2] text-white text-xs font-bold px-3 py-1 rounded-full">POD 2</span>
-            <i data-lucide="line-chart" class="text-slate-400 w-5 h-5"></i>
-          </div>
-          <h4 class="font-black text-[#183058] text-lg mb-1">Pipeline Asset Rejuvenation</h4>
-          <p class="text-slate-500 text-xs mb-4 uppercase tracking-wider font-semibold">Flow Restoration</p>
-          <div class="space-y-3 text-sm">
-            <p><strong class="text-slate-700">Target Entities:</strong> Sinopec and PetroChina infrastructure.</p>
-            <div class="bg-blue-50 p-3 rounded-lg border border-blue-100">
-              <strong class="text-[#5176A2] block mb-1">Key Success Outcomes:</strong>
-              <span class="text-slate-700 font-medium">&gt;99% viscosity reduction, restoring pipeline flow & mitigating blockages.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal bg-white rounded-2xl p-6 border border-slate-200 shadow-md">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
-            <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">POD 3</span>
-            <i data-lucide="line-chart" class="text-slate-400 w-5 h-5"></i>
-          </div>
-          <h4 class="font-black text-[#183058] text-lg mb-1">Sludge Oil Recovery (SOR)</h4>
-          <p class="text-slate-500 text-xs mb-4 uppercase tracking-wider font-semibold">Waste-to-Value</p>
-          <div class="space-y-3 text-sm">
-            <p><strong class="text-slate-700">Target Facilities:</strong> Sinopec Shengli Refinery.</p>
-            <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100">
-              <strong class="text-emerald-600 block mb-1">Key Success Outcomes:</strong>
-              <span class="text-slate-700 font-medium">&gt;95% crude oil recovery, 80% sludge residue reduction.</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Consortium Section -->
-  <section id="consortium" class="py-20 bg-white relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-block bg-orange-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-[10px]">Partnership Ecosystem</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4 tracking-tight">Corporate Strategic Alignment</h3>
-        <p class="text-slate-600 text-base leading-relaxed">
-          Our resilient consortium model guarantees technical excellence backed by deep local integration and regulatory compliance.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="reveal bg-gradient-to-br from-[#183058] to-blue-900 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden group hover:scale-[1.01] transition-transform">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors"></div>
-          <i data-lucide="building-2" class="text-[#F29631] mb-6 w-10 h-10"></i>
-          <h4 class="text-2xl font-black mb-1">Glory Asia Energy</h4>
-          <p class="text-blue-200 text-xs uppercase tracking-wider font-bold mb-4">Technology & Funding Lead</p>
-          <p class="text-blue-100/80 text-sm leading-relaxed">
-            Acting as the primary Technology Provider deploying Best Available Technology (BAT), and serving as Project Lead for capital investment and infrastructure funding.
-          </p>
-        </div>
-        
-        <div class="reveal bg-white rounded-3xl p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:scale-[1.01] transition-transform">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-orange-50 transition-colors"></div>
-          <i data-lucide="users" class="text-[#5176A2] mb-6 w-10 h-10"></i>
-          <h4 class="text-2xl font-black text-[#183058] mb-1">PT Radiant Utama</h4>
-          <p class="text-slate-500 text-xs uppercase tracking-wider font-bold mb-4">Local Content & Representation</p>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Acting as the strategic local partner, leveraging its extensive presence to manage regulatory requirements, licensing, permitting, and local content (TKDN) compliance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* Key Management Team Section */}
-      <section id="team" className="py-20 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <RevealOnScroll className="text-center max-w-2xl mx-auto mb-16">
-            <div className="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
-              <h2 className="text-[#183058] font-bold tracking-widest uppercase text-[10px]">Leadership</h2>
-            </div>
-            <h3 className="text-3xl md:text-4xl font-black text-[#183058] mb-4">Key Management Team</h3>
-            <p className="text-slate-600 text-base leading-relaxed">
-              Meet the experienced professionals driving innovation and operational excellence across our global projects.
-            </p>
-          </RevealOnScroll>
-
-          {/* Baris Atas: 3 Orang */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {[
-              { name: 'David Xu', role: 'FOUNDER & GROUP PRESIDENT', desc: 'Leading the global strategic vision and operational excellence.', img: '' },
-              { name: 'Dr. Jane Smith', role: 'CHIEF TECHNOLOGY OFFICER', desc: 'Spearheading nano-chemical research and technological innovation.', img: '' },
-              { name: 'Ahmad Rizal', role: 'OPERATIONS DIRECTOR', desc: 'Overseeing field deployment and site safety management.', img: '' }
-            ].map((member, idx) => (
-              <RevealOnScroll key={idx} delay={idx * 100} className="flex flex-col items-center text-center">
-                <div className="w-48 h-48 rounded-full bg-[#183058] flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
-                  {/* Jika anda ada gambar sebenar, tukar img: '' kepada img: '/gambar.jpg' */}
-                  {member.img ? (
-                    <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  ) : (
-                    <span className="text-[#F29631] font-bold text-xl px-4">{member.name}</span>
-                  )}
-                </div>
-                <h4 className="text-xl font-black text-[#183058] mb-1">{member.name}</h4>
-                <p className="text-[#F29631] text-[11px] font-bold tracking-wider uppercase mb-3">{member.role}</p>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{member.desc}</p>
-              </RevealOnScroll>
-            ))}
-          </div>
-
-          {/* Baris Bawah: 2 Orang (Diletakkan di tengah) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto mt-12">
-            {[
-              { name: 'Sarah Chen', role: 'VP OF GLOBAL PARTNERSHIPS', desc: 'Fostering international relations and consortium building.', img: '' },
-              { name: 'Michael Lee', role: 'CHIEF FINANCIAL OFFICER', desc: 'Managing financial strategy, investments, and corporate growth.', img: '' } // Ini ahli ke-5
-            ].map((member, idx) => (
-              <RevealOnScroll key={idx + 3} delay={(idx + 3) * 100} className="flex flex-col items-center text-center">
-                <div className="w-48 h-48 rounded-full bg-[#183058] flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
-                  {member.img ? (
-                    <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  ) : (
-                    <span className="text-[#F29631] font-bold text-xl px-4">{member.name}</span>
-                  )}
-                </div>
-                <h4 className="text-xl font-black text-[#183058] mb-1">{member.name}</h4>
-                <p className="text-[#F29631] text-[11px] font-bold tracking-wider uppercase mb-3">{member.role}</p>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{member.desc}</p>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-[#F29631]/10 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#5176A2]/20 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="reveal text-center max-w-2xl mx-auto mb-10">
-        <div class="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-[10px]">Project Media & Gallery</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-white mb-4 tracking-tight">Our Projects in Action</h3>
-        <p class="text-slate-300 text-base leading-relaxed">
-          Explore our visual documentation of high-impact brownfield asset transformations and technological deployments in the field.
-        </p>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="reveal flex flex-wrap justify-center gap-2 mb-10" id="gallery-filters">
-        <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-[#F29631] text-white shadow-lg shadow-orange-500/30">All Media</button>
-        <button data-filter="well" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700">Well Rejuvenation</button>
-        <button data-filter="pipeline" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700">Pipeline Asset</button>
-        <button data-filter="sludge" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700">Sludge Recovery</button>
-        <button data-filter="operations" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700">Field Operations</button>
-        <button data-filter="video" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700">Video Demos</button>
-      </div>
-
-      <!-- Gallery Items Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="gallery-grid">
-        
-        <!-- Item 1 -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="well" data-type="image" data-src="/1.jpeg" data-title="Brownfield Well Rejuvenation Site" data-desc="Smart rodless plunger pump system installed at Zhundong Field.">
-          <img src="/1.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80';" alt="Well Rejuvenation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="image" class="text-[#5176A2] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Photo</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">Brownfield Well Rejuvenation Site</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">Smart rodless plunger pump system installed at Zhundong Field.</p>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="pipeline" data-type="image" data-src="/2.jpeg" data-title="High-Pressure Pipeline Thermal Cleaning" data-desc="50°C nano-chemical injection units active along PetroChina pipeline segment.">
-          <img src="/2.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541888946425-d0fbb186a5b2?auto=format&fit=crop&w=600&q=80';" alt="Pipeline Thermal Cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="image" class="text-[#5176A2] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Photo</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">High-Pressure Pipeline Thermal Cleaning</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">50°C nano-chemical injection units active along PetroChina pipeline segment.</p>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="sludge" data-type="image" data-src="/3.jpeg" data-title="Automated Sludge Separation Rig" data-desc="Closed-loop COW process recovering >95% crude oil with zero entry risk.">
-          <img src="/3.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80';" alt="Sludge Separation Rig" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="image" class="text-[#5176A2] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Photo</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">Automated Sludge Separation Rig</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">Closed-loop COW process recovering &gt;95% crude oil with zero entry risk.</p>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="pipeline" data-type="image" data-src="/4.jpeg" data-title="Pipeline Operation" data-desc="Live field test demonstrating rapid flow activation and viscosity reduction.">
-          <img src="/4.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80';" alt="Pipeline Operation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="image" class="text-[#5176A2] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Photo</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">Pipeline Operation</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">Live field test demonstrating rapid flow activation and viscosity reduction.</p>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="operations" data-type="image" data-src="/5.jpeg" data-title="Nano-Chemical Laboratory Testing" data-desc="R&D testing for customized bio-surfactants and wax dissolution formulas.">
-          <img src="/5.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80';" alt="Laboratory Testing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="image" class="text-[#5176A2] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Photo</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">Nano-Chemical Laboratory Testing</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">R&D testing for customized bio-surfactants and wax dissolution formulas.</p>
-          </div>
-        </div>
-
-        <!-- Item 6 (Video) -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="video" data-type="video" data-src="/6.mp4" data-title="Mining Operation Demo 1" data-desc="Crude washing unit reducing hazardous waste sludge weight by over 70%.">
-          <img src="/3.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80';" alt="Mining Operation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="play-circle" class="text-[#F29631] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Video</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">Mining Operation Demo 1</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">Crude washing unit reducing hazardous waste sludge weight by over 70%.</p>
-          </div>
-        </div>
-
-        <!-- Item 7 (Video) -->
-        <div class="gallery-item reveal group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300"
-             data-category="video" data-type="video" data-src="/7.mp4" data-title="Mining Operation Demo 2" data-desc="Crude washing unit reducing hazardous waste sludge weight by over 70%.">
-          <img src="/4.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541888946425-d0fbb186a5b2?auto=format&fit=crop&w=600&q=80';" alt="Mining Operation 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
-            <i data-lucide="play-circle" class="text-[#F29631] w-3 h-3"></i>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-white">Video</span>
-          </div>
-          <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-white">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-          </div>
-          <div class="absolute bottom-0 left-0 w-full p-4">
-            <h4 class="text-sm font-bold text-white mb-1 group-hover:text-[#F29631] transition-colors leading-snug">Mining Operation Demo 2</h4>
-            <p class="text-slate-300 text-xs line-clamp-1 opacity-80">Crude washing unit reducing hazardous waste sludge weight by over 70%.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Lightbox Modal -->
-  <div id="media-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden animate-in fade-in duration-200">
-    <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
-      <button id="close-modal" class="absolute top-4 right-4 z-20 bg-slate-800/80 text-white p-2 rounded-full hover:bg-slate-700 transition-colors">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-
-      <div class="p-2 sm:p-4">
-        <div id="modal-media-container" class="w-full rounded-2xl overflow-hidden bg-black flex items-center justify-center">
-          <!-- Dynamically inserted img or video -->
-        </div>
-        
-        <div class="p-4 sm:p-6">
-          <div class="flex items-center space-x-2 mb-2">
-            <span id="modal-category" class="bg-[#F29631] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-              Category
-            </span>
-          </div>
-          <h3 id="modal-title" class="text-xl font-bold text-white mb-2">Media Title</h3>
-          <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed">Media Description</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Workpack Section -->
-  <section id="workpack" class="py-20 bg-slate-50 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center max-w-3xl mx-auto mb-12">
-        <div class="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#183058] font-bold tracking-widest uppercase text-[10px]">Operational Structure</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4">Project Workpack Summary</h3>
-        <p class="text-slate-600 text-base leading-relaxed">
-          A comprehensive framework ensuring seamless, unified project execution from initial preparation to long-term maintenance.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <div class="reveal bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <i data-lucide="briefcase" class="text-[#F29631] mb-4 w-7 h-7"></i>
-          <h4 class="font-black text-[#183058] text-base mb-2">Executive Summary</h4>
-          <p class="text-slate-500 text-xs uppercase font-bold mb-2">Project Overview</p>
-          <p class="text-slate-600 text-xs leading-relaxed">High-level roadmap, objectives, and the "technical services + operational hosting" delivery model.</p>
-        </div>
-
-        <div class="reveal bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <i data-lucide="users" class="text-[#5176A2] mb-4 w-7 h-7"></i>
-          <h4 class="font-black text-[#183058] text-base mb-2">Organizational Framework</h4>
-          <p class="text-slate-500 text-xs uppercase font-bold mb-2">Management Structure</p>
-          <p class="text-slate-600 text-xs leading-relaxed">Command center roles, specialized operational departments, and support teams ensuring unified execution.</p>
-        </div>
-
-        <div class="reveal bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <i data-lucide="clipboard-check" class="text-emerald-600 mb-4 w-7 h-7"></i>
-          <h4 class="font-black text-[#183058] text-base mb-2">Operational Standards</h4>
-          <p class="text-slate-500 text-xs uppercase font-bold mb-2">Technical & Quality Baseline</p>
-          <p class="text-slate-600 text-xs leading-relaxed">ISO 9001 standard quality protocols, technical specifications, and resource coordination mechanisms.</p>
-        </div>
-
-        <div class="reveal bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <i data-lucide="shield" class="text-red-500 mb-4 w-7 h-7"></i>
-          <h4 class="font-black text-[#183058] text-base mb-2">Health & Safety</h4>
-          <p class="text-slate-500 text-xs uppercase font-bold mb-2">HSE Systems</p>
-          <p class="text-slate-600 text-xs leading-relaxed">Mandatory compliance requirements, including Permit to Work (PTW), Job Safety Analysis (JSA), and strict protection protocols.</p>
-        </div>
-
-        <div class="reveal bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <i data-lucide="leaf" class="text-emerald-500 mb-4 w-7 h-7"></i>
-          <h4 class="font-black text-[#183058] text-base mb-2">Environmental Management</h4>
-          <p class="text-slate-500 text-xs uppercase font-bold mb-2">Compliance & Protection</p>
-          <p class="text-slate-600 text-xs leading-relaxed">Strategies for eco-friendly chemicals, compliant hazardous waste disposal, and site restoration.</p>
-        </div>
-
-        <div class="reveal bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <i data-lucide="alert-triangle" class="text-amber-500 mb-4 w-7 h-7"></i>
-          <h4 class="font-black text-[#183058] text-base mb-2">Emergency Response</h4>
-          <p class="text-slate-500 text-xs uppercase font-bold mb-2">Risk Mitigation</p>
-          <p class="text-slate-600 text-xs leading-relaxed">Contingency plans for operational hazards and on-site emergency resources with local support links.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technological Edge Comparison Table -->
-  <section class="py-20 bg-white relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-block bg-orange-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-[10px]">Technological Edge</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4">GAE (BAT) vs. Conventional</h3>
-        <p class="text-slate-600 text-sm">A paradigm shift in operational efficiency, safety, and environmental compliance.</p>
-      </div>
-
-      <div class="reveal overflow-x-auto">
-        <table class="w-full text-left border-collapse rounded-2xl overflow-hidden shadow-md">
-          <thead>
-            <tr class="bg-[#183058] text-white text-xs font-bold uppercase tracking-wider">
-              <th class="p-4">Focus Area</th>
-              <th class="p-4">Conventional Methods</th>
-              <th class="p-4">Glory Asia Energy (BAT)</th>
-              <th class="p-4">Key Advantages</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-200 text-xs sm:text-sm bg-slate-50">
-            <tr class="hover:bg-slate-100 transition-colors">
-              <td class="p-4 font-bold text-[#183058] flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-[#F29631]"></span> Idle Wells
-              </td>
-              <td class="p-4 text-slate-600">Workover Rig / Injection</td>
-              <td class="p-4 font-semibold text-[#183058]">Smart Rodless + Nano-Stimulation</td>
-              <td class="p-4 font-bold text-emerald-700 bg-emerald-50/50">40% Lower Mob Costs, Rapid Flow</td>
-            </tr>
-            <tr class="hover:bg-slate-100 transition-colors">
-              <td class="p-4 font-bold text-[#183058] flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-[#5176A2]"></span> Pipelines
-              </td>
-              <td class="p-4 text-slate-600">Trucking / Chemical Flushing</td>
-              <td class="p-4 font-semibold text-[#183058]">Mechanical + Nano-Chemical Cleaning</td>
-              <td class="p-4 font-bold text-emerald-700 bg-emerald-50/50">10-Yr Life Extension, Integrity Audit</td>
-            </tr>
-            <tr class="hover:bg-slate-100 transition-colors">
-              <td class="p-4 font-bold text-[#183058] flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Storage Tanks
-              </td>
-              <td class="p-4 text-slate-600">Manual Excavation / Venting</td>
-              <td class="p-4 font-semibold text-[#183058]">Closed-Loop COW + 3-Phase Separation</td>
-              <td class="p-4 font-bold text-emerald-700 bg-emerald-50/50">95%+ Oil Recovery, Zero Emissions</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Deployment Roadmap Section -->
-  <section class="py-20 bg-slate-100 relative border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#183058] font-bold tracking-widest uppercase text-[10px]">Project Lifecycle</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4">Deployment Roadmap</h3>
-        <p class="text-slate-600 text-sm">A rigorous phased execution approach ensuring success from initial contact to full-scale field deployment.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        
-        <div class="reveal bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-between">
-          <div>
-            <span class="w-8 h-8 rounded-full bg-[#183058] text-white font-black text-xs flex items-center justify-center mx-auto mb-3">01</span>
-            <h4 class="font-black text-[#183058] text-base mb-2">Engagement</h4>
-            <p class="text-slate-500 text-xs leading-relaxed">Technical presentations, project goal alignment, and business formalization.</p>
-          </div>
-        </div>
-
-        <div class="reveal bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-between">
-          <div>
-            <span class="w-8 h-8 rounded-full bg-[#183058] text-white font-black text-xs flex items-center justify-center mx-auto mb-3">02</span>
-            <h4 class="font-black text-[#183058] text-base mb-2">Discovery</h4>
-            <p class="text-slate-500 text-xs leading-relaxed">In-depth data collection, physical site surveys, and sampling.</p>
-          </div>
-        </div>
-
-        <div class="reveal bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-between">
-          <div>
-            <span class="w-8 h-8 rounded-full bg-[#183058] text-white font-black text-xs flex items-center justify-center mx-auto mb-3">03</span>
-            <h4 class="font-black text-[#183058] text-base mb-2">Validation</h4>
-            <p class="text-slate-500 text-xs leading-relaxed">Bench-scale lab simulations to calibrate formulations & parameters.</p>
-          </div>
-        </div>
-
-        <div class="reveal bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-between">
-          <div>
-            <span class="w-8 h-8 rounded-full bg-[#183058] text-white font-black text-xs flex items-center justify-center mx-auto mb-3">04</span>
-            <h4 class="font-black text-[#183058] text-base mb-2">Pilot</h4>
-            <p class="text-slate-500 text-xs leading-relaxed">Controlled field deployment on a single asset to verify metrics.</p>
-          </div>
-        </div>
-
-        <div class="reveal bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-between">
-          <div>
-            <span class="w-8 h-8 rounded-full bg-[#183058] text-white font-black text-xs flex items-center justify-center mx-auto mb-3">05</span>
-            <h4 class="font-black text-[#183058] text-base mb-2">Execution</h4>
-            <p class="text-slate-500 text-xs leading-relaxed">Full-scale actual field deployment and digital monitoring integration.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Footer Section -->
-  <footer id="contact" class="bg-[#183058] pt-16 pb-12 relative overflow-hidden text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="grid lg:grid-cols-12 gap-8 items-start mb-16">
-        
-        <!-- Left Box -->
-        <div class="lg:col-span-5 bg-gradient-to-br from-blue-900/60 to-slate-900/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl flex flex-col justify-between min-h-[300px]">
-          <div>
-            <img src="/favicon.svg" onerror="this.onerror=null; this.src='https://placehold.co/48x48/183058/F29631?text=GAE';" alt="Glory Asia Energy" class="w-12 h-12 object-contain mb-6 brightness-0 invert" />
-            <h3 class="text-3xl font-black text-white leading-tight mb-4">
-              Partnering for <br />
-              <span class="text-[#F29631]">Energy Excellence</span>
-            </h3>
-            <p class="text-blue-100/70 text-sm leading-relaxed">
-              Let's collaborate to transform your mature brownfield assets into sustainable, high-performing energy infrastructure.
-            </p>
-          </div>
-        </div>
-
-        <!-- Right Box: Contact Info Card -->
-        <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-3xl shadow-2xl relative overflow-hidden">
-          <div class="flex items-center space-x-2 text-xs font-bold text-[#F29631] uppercase tracking-widest mb-2">
-            <span>Contact Information</span>
-          </div>
-          <h4 class="text-2xl font-black text-[#183058] mb-6">Glory Asia Energy</h4>
-
-          <div class="space-y-4">
-            <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-              <div class="p-3 bg-blue-50 text-[#183058] rounded-xl flex-shrink-0">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Regional Headquarters</span>
-                <p class="text-slate-700 text-xs sm:text-sm font-semibold leading-relaxed">
-                  B-2-9 Plaza Arkadia, No. 3 Jalan Intisari Perdana, <br />
-                  Desa Park City, 52200 Kuala Lumpur
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-center space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-              <div class="p-3 bg-orange-50 text-[#F29631] rounded-xl flex-shrink-0">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Email Support</span>
-                <a href="mailto:contact@gloryasiaenergy.com" class="text-slate-800 text-xs sm:text-sm font-bold hover:text-[#F29631] transition-colors">
-                  contact@gloryasiaenergy.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-blue-200/60">
-        <p>&copy; 2026 Glory Asia Energy Sdn Bhd. All rights reserved.</p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms and Conditions</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- JavaScript Interactions -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Initialize Lucide Icons
-      lucide.createIcons();
-
-      // Navbar scroll behavior
-      const navbar = document.getElementById('navbar');
-      const brandText = document.getElementById('nav-brand-1');
-      const navLinks = document.querySelectorAll('.nav-link');
-      const menuBtn = document.getElementById('mobile-menu-btn');
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-          navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-          navbar.classList.remove('bg-transparent', 'py-4');
-          brandText.classList.add('text-[#183058]');
-          brandText.classList.remove('text-white');
-          menuBtn.classList.add('text-[#183058]');
-          menuBtn.classList.remove('text-white');
-
-          navLinks.forEach(link => {
-            link.classList.add('text-slate-600');
-            link.classList.remove('text-slate-200');
-          });
-        } else {
-          navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-          navbar.classList.add('bg-transparent', 'py-4');
-          brandText.classList.remove('text-[#183058]');
-          brandText.classList.add('text-white');
-          menuBtn.classList.remove('text-[#183058]');
-          menuBtn.classList.add('text-white');
-
-          navLinks.forEach(link => {
-            link.classList.remove('text-slate-600');
-            link.classList.add('text-slate-200');
-          });
-        }
-      });
-
-      // Mobile Menu Toggle
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuOpenIcon = document.getElementById('menu-icon-open');
-      const menuCloseIcon = document.getElementById('menu-icon-close');
-
-      menuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-          mobileMenu.classList.remove('hidden');
-          menuOpenIcon.classList.add('hidden');
-          menuCloseIcon.classList.remove('hidden');
-        } else {
-          mobileMenu.classList.add('hidden');
-          menuOpenIcon.classList.remove('hidden');
-          menuCloseIcon.classList.add('hidden');
-        }
-      });
-
-      document.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          menuOpenIcon.classList.remove('hidden');
-          menuCloseIcon.classList.add('hidden');
-        });
-      });
-
-      // Scroll Reveal Animation (Intersection Observer)
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      reveals.forEach(el => observer.observe(el));
-
-      // Gallery Filtering
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const galleryItems = document.querySelectorAll('.gallery-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
-
-          filterBtns.forEach(b => {
-            b.classList.remove('bg-[#F29631]', 'text-white', 'shadow-lg', 'shadow-orange-500/30');
-            b.classList.add('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
-          });
-
-          btn.classList.add('bg-[#F29631]', 'text-white', 'shadow-lg', 'shadow-orange-500/30');
-          btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
-
-          galleryItems.forEach(item => {
-            const category = item.getAttribute('data-category');
-            const type = item.getAttribute('data-type');
-
-            if (filter === 'all' || category === filter || (filter === 'video' && type === 'video')) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gae: {
+                            blue: '#183058',
+                            orange: '#F29631'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
             }
-          });
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom styles for animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        .animate-ping-slow {
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-gae-orange selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <div class="transform group-hover:scale-105 transition-transform duration-300">
+                        <img src="/favicon.svg" alt="Glory Asia Energy" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-md" />
+                    </div>
+                    <div class="flex items-center ml-2 space-x-1.5 sm:space-x-2">
+                        <span id="logo-text-1" class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-white">GLORY ASIA</span>
+                        <span class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-gae-orange">ENERGY</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-5 items-center">
+                    <a href="#about" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">About Us</a>
+                    <a href="#expertise" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">Expertise</a>
+                    <a href="#cases" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">Track Record</a>
+                    <a href="#consortium" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">Consortium</a>
+                    <a href="#team" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">Team</a>
+                    <a href="#gallery" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">Gallery</a>
+                    <a href="#workpack" class="nav-link text-xs font-bold tracking-wider uppercase transition-colors hover:text-gae-orange text-slate-200">Workpacks</a>
+                    <a href="#contact" class="bg-gae-orange text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-orange-600 transition-all shadow-md hover:-translate-y-0.5">
+                        Partner With Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="focus:outline-none transition-colors text-white">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl mt-2 pb-4 px-4">
+            <div class="flex flex-col space-y-1 mt-2 text-center">
+                <a href="#about" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-gae-blue rounded-xl transition-colors">About Us</a>
+                <a href="#expertise" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-gae-blue rounded-xl transition-colors">Core Expertise</a>
+                <a href="#cases" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-gae-blue rounded-xl transition-colors">Track Record</a>
+                <a href="#consortium" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-gae-blue rounded-xl transition-colors">Consortium</a>
+                <a href="#team" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-gae-blue rounded-xl transition-colors">Team</a>
+                <a href="#gallery" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-gae-blue rounded-xl transition-colors">Gallery</a>
+                <a href="#contact" class="mobile-link block mt-2 bg-gae-blue text-white px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-blue-900 transition-colors shadow-sm">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-gae-blue">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5176A2]/30 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gae-orange/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        
+        <div class="absolute inset-0 z-0">
+            <img src="/firstpage.png" alt="Industrial Energy" class="w-full h-full object-cover opacity-40" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000&auto=format&fit=crop';" />
+            <div class="absolute inset-0 bg-gradient-to-br from-gae-blue via-gae-blue/95 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16">
+            <div class="reveal max-w-3xl">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-gae-orange animate-ping-slow"></span>
+                    <span class="w-2 h-2 rounded-full bg-gae-orange absolute"></span>
+                    <span class="pl-2">Best Available Technology (BAT)</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
+                    Glory Asia <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gae-orange to-yellow-400 drop-shadow-sm">Energy</span>
+                </h1>
+                
+                <p class="text-base md:text-xl text-blue-100/80 mb-10 leading-relaxed font-light max-w-2xl">
+                    Empowering Global Energy Transformation through Mineral Resource Development & Advanced Oil & Gas Engineering Services. Led by Founder & Group President, Mr. David Xu-driven by "Technology-Enabled, Green-Driven, Value-Creating" core concepts.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#expertise" class="flex items-center justify-center bg-gae-orange text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(242,150,49,0.3)] hover:-translate-y-0.5">
+                        Explore Solutions <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                    <a href="#consortium" class="flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider border border-white/30 hover:border-white hover:bg-white/10 transition-all">
+                        Our Partnerships
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="relative -mt-12 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+            <div class="bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 p-6 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                <div class="flex items-center space-x-4 px-2 group cursor-default">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-50 rounded-xl flex items-center justify-center text-gae-orange flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-gae-blue leading-none mb-1">&gt;30M</p>
+                        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Tonnes of Reserves (Fluorite, Pb-Zn)</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 px-2 pt-4 md:pt-0 group cursor-default">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center text-[#5176A2] flex-shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 shadow-inner">
+                        <i data-lucide="globe-2"></i>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-gae-blue leading-none mb-1">&gt;20B</p>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">RMB Corporate Valuation</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 px-2 pt-4 md:pt-0 group cursor-default">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-gae-blue leading-none mb-1">36</p>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Technical Patents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (5 Members) -->
+    <section id="team" class="py-20 bg-slate-50 relative mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
+                    <h2 class="text-gae-blue font-bold tracking-widest uppercase text-[10px]">Leadership</h2>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-black text-gae-blue mb-4">Key Management Team</h3>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Meet the experienced professionals driving innovation and operational excellence across our global projects.
+                </p>
+            </div>
+
+            <!-- Top Row: 3 Members -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                
+                <div class="reveal flex flex-col items-center text-center">
+                    <div class="w-48 h-48 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                        <span class="text-gae-orange font-bold text-xl px-4 group-hover:scale-110 transition-transform duration-500">David Xu</span>
+                        <!-- Uncomment dan letak gambar sebenar -->
+                        <!-- <img src="/david.jpg" alt="David Xu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"> -->
+                    </div>
+                    <h4 class="text-xl font-black text-gae-blue mb-1">David Xu</h4>
+                    <p class="text-gae-orange text-[11px] font-bold tracking-wider uppercase mb-3">FOUNDER & GROUP PRESIDENT</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Leading the global strategic vision and operational excellence.</p>
+                </div>
+
+                <div class="reveal flex flex-col items-center text-center delay-[100ms]">
+                    <div class="w-48 h-48 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                        <span class="text-gae-orange font-bold text-xl px-4 group-hover:scale-110 transition-transform duration-500">Jane Smith</span>
+                    </div>
+                    <h4 class="text-xl font-black text-gae-blue mb-1">Dr. Jane Smith</h4>
+                    <p class="text-gae-orange text-[11px] font-bold tracking-wider uppercase mb-3">CHIEF TECHNOLOGY OFFICER</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Spearheading nano-chemical research and technological innovation.</p>
+                </div>
+
+                <div class="reveal flex flex-col items-center text-center delay-[200ms]">
+                    <div class="w-48 h-48 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                        <span class="text-gae-orange font-bold text-xl px-4 group-hover:scale-110 transition-transform duration-500">Ahmad Rizal</span>
+                    </div>
+                    <h4 class="text-xl font-black text-gae-blue mb-1">Ahmad Rizal</h4>
+                    <p class="text-gae-orange text-[11px] font-bold tracking-wider uppercase mb-3">OPERATIONS DIRECTOR</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Overseeing field deployment and site safety management.</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row: 2 Members (Centered) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto mt-12">
+                
+                <div class="reveal flex flex-col items-center text-center delay-[300ms]">
+                    <div class="w-48 h-48 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                        <span class="text-gae-orange font-bold text-xl px-4 group-hover:scale-110 transition-transform duration-500">Sarah Chen</span>
+                    </div>
+                    <h4 class="text-xl font-black text-gae-blue mb-1">Sarah Chen</h4>
+                    <p class="text-gae-orange text-[11px] font-bold tracking-wider uppercase mb-3">VP OF GLOBAL PARTNERSHIPS</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Fostering international relations and consortium building.</p>
+                </div>
+
+                <div class="reveal flex flex-col items-center text-center delay-[400ms]">
+                    <div class="w-48 h-48 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                        <span class="text-gae-orange font-bold text-xl px-4 group-hover:scale-110 transition-transform duration-500">Michael Lee</span>
+                    </div>
+                    <h4 class="text-xl font-black text-gae-blue mb-1">Michael Lee</h4>
+                    <p class="text-gae-orange text-[11px] font-bold tracking-wider uppercase mb-3">CHIEF FINANCIAL OFFICER</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Managing financial strategy, investments, and corporate growth.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gae-orange/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#5176A2]/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="reveal text-center max-w-2xl mx-auto mb-10">
+                <div class="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full mb-4">
+                    <h2 class="text-gae-orange font-bold tracking-widest uppercase text-[10px]">Project Media & Gallery</h2>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-black text-white mb-4 tracking-tight">Our Projects in Action</h3>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="reveal flex flex-wrap justify-center gap-2 mb-10" id="gallery-filters">
+                <button data-filter="all" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-gae-orange text-white shadow-lg shadow-orange-500/30">All Media</button>
+                <button data-filter="well" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-slate-700">Well Rejuvenation</button>
+                <button data-filter="pipeline" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-slate-700">Pipeline Asset</button>
+                <button data-filter="video" class="filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-slate-700">Video Demos</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="gallery-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Lightbox -->
+    <div id="media-modal" class="hidden fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+            <button id="close-modal" class="absolute top-4 right-4 z-20 bg-slate-800/80 text-white p-2 rounded-full hover:bg-slate-700 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="p-2 sm:p-4" id="modal-content">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gae-blue pt-16 pb-12 relative overflow-hidden text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 items-start mb-16">
+                <!-- Left Box -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-blue-900/60 to-slate-900/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl flex flex-col justify-between min-h-[300px]">
+                    <div>
+                        <img src="/favicon.svg" alt="GAE Logo" class="w-12 h-12 object-contain mb-6 brightness-0 invert" />
+                        <h3 class="text-3xl font-black text-white leading-tight mb-4">
+                            Partnering for <br />
+                            <span class="text-gae-orange">Energy Excellence</span>
+                        </h3>
+                        <p class="text-blue-100/70 text-sm leading-relaxed">
+                            Let's collaborate to transform your mature brownfield assets into sustainable, high-performing energy infrastructure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Box -->
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div class="flex items-center space-x-2 text-xs font-bold text-gae-orange uppercase tracking-widest mb-2">
+                        <span>Contact Information</span>
+                    </div>
+                    <h4 class="text-2xl font-black text-gae-blue mb-6">Glory Asia Energy</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <div class="p-3 bg-blue-50 text-gae-blue rounded-xl flex-shrink-0">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Regional Headquarters</span>
+                                <p class="text-slate-700 text-xs sm:text-sm font-semibold leading-relaxed">
+                                    B-2-9 Plaza Arkadia, No. 3 Jalan Intisari Perdana, <br />
+                                    Desa Park City, 52200 Kuala Lumpur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-blue-200/60">
+                <p>&copy; 2026 Glory Asia Energy Sdn Bhd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- 1. Initialize Icons ---
+        lucide.createIcons();
+
+        // --- 2. Scroll Animations & Navbar State ---
+        const navbar = document.getElementById('navbar');
+        const logoText1 = document.getElementById('logo-text-1');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY > 40;
+            
+            // Navbar styles
+            if (scrolled) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                logoText1.classList.remove('text-white');
+                logoText1.classList.add('text-gae-blue');
+                mobileMenuBtn.classList.remove('text-white');
+                mobileMenuBtn.classList.add('text-gae-blue');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-slate-200');
+                    link.classList.add('text-slate-600');
+                });
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                logoText1.classList.add('text-white');
+                logoText1.classList.remove('text-gae-blue');
+                mobileMenuBtn.classList.add('text-white');
+                mobileMenuBtn.classList.remove('text-gae-blue');
+                navLinks.forEach(link => {
+                    link.classList.add('text-slate-200');
+                    link.classList.remove('text-slate-600');
+                });
+            }
         });
-      });
 
-      // Gallery Modal Lightbox
-      const modal = document.getElementById('media-modal');
-      const modalContainer = document.getElementById('modal-media-container');
-      const modalCategory = document.getElementById('modal-category');
-      const modalTitle = document.getElementById('modal-title');
-      const modalDesc = document.getElementById('modal-desc');
-      const closeModalBtn = document.getElementById('close-modal');
+        // Intersection Observer for Reveal animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-      galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const type = item.getAttribute('data-type');
-          const src = item.getAttribute('data-src');
-          const title = item.getAttribute('data-title');
-          const desc = item.getAttribute('data-desc');
-          const category = item.getAttribute('data-category');
+        revealElements.forEach(el => revealObserver.observe(el));
 
-          modalCategory.textContent = category.toUpperCase();
-          modalTitle.textContent = title;
-          modalDesc.textContent = desc;
+        // --- 3. Mobile Menu Toggle ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
 
-          if (type === 'video') {
-            modalContainer.innerHTML = `
-              <div class="aspect-video w-full">
-                <video controls autoplay class="w-full h-full object-contain">
-                  <source src="${src}" type="video/mp4" />
-                  Browser anda tidak menyokong tag video.
-                </video>
-              </div>
-            `;
-          } else {
-            modalContainer.innerHTML = `
-              <div class="max-h-[70vh]">
-                <img src="${src}" alt="${title}" class="max-h-[70vh] w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80';" />
-              </div>
-            `;
-          }
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons(); // refresh icon
+        }
 
-          modal.classList.remove('hidden');
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', toggleMenu);
         });
-      });
 
-      const closeModal = () => {
-        modal.classList.add('hidden');
-        modalContainer.innerHTML = '';
-      };
+        // --- 4. Gallery Logic ---
+        const galleryData = [
+            { id: 1, title: 'Brownfield Well', category: 'well', type: 'image', src: '/1.jpeg', description: 'Smart rodless plunger pump system.' },
+            { id: 2, title: 'Thermal Cleaning', category: 'pipeline', type: 'image', src: '/2.jpeg', description: '50°C nano-chemical injection.' },
+            { id: 3, title: 'Automated Sludge', category: 'sludge', type: 'image', src: '/3.jpeg', description: 'Closed-loop COW process.' },
+            { id: 6, title: 'Mining Operations', category: 'video', type: 'video', src: '/6.mp4', description: 'Crude washing unit video demonstration.' }
+        ];
 
-      closeModalBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-      });
-    });
-  </script>
+        const galleryGrid = document.getElementById('gallery-grid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const modal = document.getElementById('media-modal');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+
+        function renderGallery(filter = 'all') {
+            galleryGrid.innerHTML = '';
+            const filtered = filter === 'all' 
+                ? galleryData 
+                : galleryData.filter(item => item.category === filter || (filter === 'video' && item.type === 'video'));
+
+            filtered.forEach((item, index) => {
+                // Determine icon
+                const iconName = item.type === 'video' ? 'play-circle' : 'image';
+                const iconColor = item.type === 'video' ? 'text-gae-orange' : 'text-[#5176A2]';
+                
+                // Card HTML
+                const card = document.createElement('div');
+                card.className = "group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-800 border border-slate-700 shadow-lg cursor-pointer transform hover:-translate-y-1.5 transition-all duration-300 reveal active";
+                card.onclick = () => openModal(item);
+                
+                let mediaElement = item.type === 'video' 
+                    ? `<img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Video cover" class="w-full h-full object-cover opacity-60">` 
+                    : `<img src="${item.src}" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800'" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">`;
+
+                card.innerHTML = `
+                    ${mediaElement}
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-white/10">
+                        <i data-lucide="${iconName}" class="w-3 h-3 ${iconColor}"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-white">${item.type}</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4">
+                        <h4 class="text-sm font-bold text-white mb-1 group-hover:text-gae-orange transition-colors">${item.title}</h4>
+                        <p class="text-slate-300 text-xs line-clamp-1 opacity-80">${item.description}</p>
+                    </div>
+                `;
+                galleryGrid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        // Filter button click events
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Update active button styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-gae-orange', 'text-white', 'shadow-lg', 'shadow-orange-500/30');
+                    b.classList.add('bg-slate-800/80', 'text-slate-300');
+                });
+                e.target.classList.add('bg-gae-orange', 'text-white', 'shadow-lg', 'shadow-orange-500/30');
+                e.target.classList.remove('bg-slate-800/80', 'text-slate-300');
+                
+                renderGallery(e.target.dataset.filter);
+            });
+        });
+
+        // Modal Logic
+        function openModal(item) {
+            modalContent.innerHTML = '';
+            
+            let mediaHTML = item.type === 'video'
+                ? `<div class="aspect-video w-full rounded-2xl overflow-hidden bg-black">
+                     <video controls autoplay class="w-full h-full object-contain">
+                       <source src="${item.src}" type="video/mp4">
+                     </video>
+                   </div>`
+                : `<div class="max-h-[70vh] flex items-center justify-center rounded-2xl overflow-hidden bg-slate-950">
+                     <img src="${item.src}" alt="${item.title}" class="max-h-[70vh] w-auto object-contain">
+                   </div>`;
+
+            modalContent.innerHTML = `
+                ${mediaHTML}
+                <div class="p-4 sm:p-6">
+                    <span class="bg-gae-orange text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-2">
+                        ${item.category}
+                    </span>
+                    <h3 class="text-xl font-bold text-white mb-2">${item.title}</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">${item.description}</p>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modalContent.innerHTML = ''; // Stop video
+        });
+
+        // Initialize gallery on load
+        renderGallery('all');
+
+    </script>
 </body>
 </html>
