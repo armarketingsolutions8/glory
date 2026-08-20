@@ -478,116 +478,64 @@ Enabled, Green-Driven, Value-Creating" core concepts.
     </div>
   </section>
 
-  <!-- Team Section -->
-  <section id="team" class="py-20 bg-slate-50 relative border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center max-w-2xl mx-auto mb-16">
-        <div class="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
-          <h2 class="text-[#183058] font-bold tracking-widest uppercase text-[10px]">Leadership</h2>
-        </div>
-        <h3 class="text-3xl md:text-4xl font-black text-[#183058] mb-4 tracking-tight">Key Management Team</h3>
-        <p class="text-slate-600 text-base leading-relaxed">
-          Meet the experienced professionals driving innovation and operational excellence across our global projects.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- Member 1 -->
-        <div class="reveal group flex flex-col items-center">
-          <div class="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
-            <img 
-              src="https://placehold.co/400x500/183058/F29631?text=David" 
-              alt="David Xu"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-[#183058]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="bg-white p-2 rounded-full text-[#183058] cursor-pointer hover:bg-[#F29631] hover:text-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 h-5"></i>
-              </div>
+  {/* Key Management Team Section */}
+      <section id="team" className="py-20 bg-slate-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevealOnScroll className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
+              <h2 className="text-[#183058] font-bold tracking-widest uppercase text-[10px]">Leadership</h2>
             </div>
-          </div>
-          <div class="text-center">
-            <h4 class="text-xl font-black text-[#183058] mb-1">David Xu</h4>
-            <p class="text-[#F29631] text-xs font-bold uppercase tracking-wider mb-3">Founder & Group President</p>
-            <p class="text-slate-500 text-sm leading-relaxed px-4">
-              Leading the global strategic vision and operational excellence.
+            <h3 className="text-3xl md:text-4xl font-black text-[#183058] mb-4">Key Management Team</h3>
+            <p className="text-slate-600 text-base leading-relaxed">
+              Meet the experienced professionals driving innovation and operational excellence across our global projects.
             </p>
+          </RevealOnScroll>
+
+          {/* Baris Atas: 3 Orang */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {[
+              { name: 'David Xu', role: 'FOUNDER & GROUP PRESIDENT', desc: 'Leading the global strategic vision and operational excellence.', img: '' },
+              { name: 'Dr. Jane Smith', role: 'CHIEF TECHNOLOGY OFFICER', desc: 'Spearheading nano-chemical research and technological innovation.', img: '' },
+              { name: 'Ahmad Rizal', role: 'OPERATIONS DIRECTOR', desc: 'Overseeing field deployment and site safety management.', img: '' }
+            ].map((member, idx) => (
+              <RevealOnScroll key={idx} delay={idx * 100} className="flex flex-col items-center text-center">
+                <div className="w-48 h-48 rounded-full bg-[#183058] flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                  {/* Jika anda ada gambar sebenar, tukar img: '' kepada img: '/gambar.jpg' */}
+                  {member.img ? (
+                    <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  ) : (
+                    <span className="text-[#F29631] font-bold text-xl px-4">{member.name}</span>
+                  )}
+                </div>
+                <h4 className="text-xl font-black text-[#183058] mb-1">{member.name}</h4>
+                <p className="text-[#F29631] text-[11px] font-bold tracking-wider uppercase mb-3">{member.role}</p>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{member.desc}</p>
+              </RevealOnScroll>
+            ))}
+          </div>
+
+          {/* Baris Bawah: 2 Orang (Diletakkan di tengah) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto mt-12">
+            {[
+              { name: 'Sarah Chen', role: 'VP OF GLOBAL PARTNERSHIPS', desc: 'Fostering international relations and consortium building.', img: '' },
+              { name: 'Michael Lee', role: 'CHIEF FINANCIAL OFFICER', desc: 'Managing financial strategy, investments, and corporate growth.', img: '' } // Ini ahli ke-5
+            ].map((member, idx) => (
+              <RevealOnScroll key={idx + 3} delay={(idx + 3) * 100} className="flex flex-col items-center text-center">
+                <div className="w-48 h-48 rounded-full bg-[#183058] flex items-center justify-center mb-6 shadow-xl border-4 border-white overflow-hidden group relative">
+                  {member.img ? (
+                    <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  ) : (
+                    <span className="text-[#F29631] font-bold text-xl px-4">{member.name}</span>
+                  )}
+                </div>
+                <h4 className="text-xl font-black text-[#183058] mb-1">{member.name}</h4>
+                <p className="text-[#F29631] text-[11px] font-bold tracking-wider uppercase mb-3">{member.role}</p>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{member.desc}</p>
+              </RevealOnScroll>
+            ))}
           </div>
         </div>
-
-        <!-- Member 2 -->
-        <div class="reveal group flex flex-col items-center">
-          <div class="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
-            <img 
-              src="https://placehold.co/400x500/183058/F29631?text=Sajahan" 
-              alt="Sajahan Bin Salman Baris"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-[#183058]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="bg-white p-2 rounded-full text-[#183058] cursor-pointer hover:bg-[#F29631] hover:text-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 h-5"></i>
-              </div>
-            </div>
-          </div>
-          <div class="text-center">
-            <h4 class="text-xl font-black text-[#183058] mb-1">Sajahan Bin Salman Baris</h4>
-            <p class="text-[#F29631] text-xs font-bold uppercase tracking-wider mb-3">Senior Vice President, Upstream & Downstream Operations</p>
-            <p class="text-slate-500 text-sm leading-relaxed px-4">
-              Spearheading nano-chemical research and technological innovation.
-            </p>
-          </div>
-        </div>
-
-        <!-- Member 3 -->
-        <div class="reveal group flex flex-col items-center">
-          <div class="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
-            <img 
-              src="https://placehold.co/400x500/183058/F29631?text=Morgan" 
-              alt="Ahmad Rizal"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-[#183058]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="bg-white p-2 rounded-full text-[#183058] cursor-pointer hover:bg-[#F29631] hover:text-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 h-5"></i>
-              </div>
-            </div>
-          </div>
-          <div class="text-center">
-            <h4 class="text-xl font-black text-[#183058] mb-1">Morgan Soon Chai</h4>
-            <p class="text-[#F29631] text-xs font-bold uppercase tracking-wider mb-3">Executive Vice President, Global Corporate Affairs & Investment</p>
-            <p class="text-slate-500 text-sm leading-relaxed px-4">
-              Overseeing field deployment and site safety management.
-            </p>
-          </div>
-        </div>
-
-        <!-- Member 4 -->
-        <div class="reveal group flex flex-col items-center">
-          <div class="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
-            <img 
-              src="https://placehold.co/400x500/183058/F29631?text=Mohamad" 
-              alt="Mohamad"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-[#183058]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="bg-white p-2 rounded-full text-[#183058] cursor-pointer hover:bg-[#F29631] hover:text-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 h-5"></i>
-              </div>
-            </div>
-          </div>
-          <div class="text-center">
-            <h4 class="text-xl font-black text-[#183058] mb-1">Mohamad Ariff Bin Abdul Sarip</h4>
-            <p class="text-[#F29631] text-xs font-bold uppercase tracking-wider mb-3">Head of Middle East Corporate Development</p>
-            <p class="text-slate-500 text-sm leading-relaxed px-4">
-              Fostering international relations and consortium building.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+      </section>
 
   <!-- Gallery Section -->
   <section id="gallery" class="py-20 bg-slate-900 text-white relative overflow-hidden">
