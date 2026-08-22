@@ -845,9 +845,11 @@
 </section>
   
 
- <!-- Team Section (5 Members) -->
+ <!-- Team Section (Organisation Chart Layout) -->
 <section id="team" class="py-20 bg-slate-50 relative mt-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
         <div class="reveal text-center max-w-2xl mx-auto mb-16">
             <div class="inline-block bg-blue-100 px-3 py-1.5 rounded-full mb-4">
                 <h2 class="text-gae-blue font-bold tracking-widest uppercase text-[10px]">Leadership</h2>
@@ -858,59 +860,89 @@
             </p>
         </div>
 
-        <!-- Top Row: 3 Members -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+        <div class="max-w-5xl mx-auto">
             
-            <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
-                <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
-                    <img src="images/david.png" alt="David Xu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <!-- LEVEL 1: David Xu -->
+            <div class="reveal flex justify-center relative z-10">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300 w-full max-w-md">
+                    <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
+                        <img src="images/david.png" alt="David Xu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-black text-[#183058] mb-1">David Xu</h4>
+                    <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">Founder & Group President</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">A seasoned natural resources executive with over two decades of global mining and energy project leadership. David Xu has successfully steered ventures across diverse geographies, combining strategic vision with operational excellence to unlock sustainable growth and maximize resource value.</p>
                 </div>
-                <h4 class="text-xl font-black text-[#183058] mb-1">David Xu</h4>
-                <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">Founder & Group President</p>
-                <p class="text-slate-500 text-sm leading-relaxed flex-grow">A seasoned natural resources executive with over two decades of global mining and energy project leadership. David Xu has successfully steered ventures across diverse geographies, combining strategic vision with operational excellence to unlock sustainable growth and maximize resource value.</p>
             </div>
 
-            <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center delay-[100ms] hover:shadow-lg transition-shadow duration-300">
-                <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
-                    <img src="images/sajahan.png" alt="Sajahan Salman" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <!-- Connecting Lines: L1 to L2 (Desktop Only) -->
+            <div class="hidden md:block">
+                <div class="w-0.5 h-8 bg-slate-300 mx-auto"></div>
+                <div class="w-1/2 mx-auto border-t-2 border-slate-300 flex justify-between h-8">
+                    <div class="w-0.5 h-full bg-slate-300 -mt-[2px]"></div>
+                    <div class="w-0.5 h-full bg-slate-300 -mt-[2px]"></div>
                 </div>
-                <h4 class="text-xl font-black text-[#183058] mb-1">Sajahan Salman</h4>
-                <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">SVP Upstream & Downstream Operations</p>
-                <p class="text-slate-500 text-sm leading-relaxed flex-grow">A seasoned Oil & Gas executive with more than two decades of hands‑on leadership across offshore and onshore operations. Sajahan has directed complex upstream facilities, including water injection systems at Petronas Carigali Platform, and advanced production chemical programs such as production chemical testing and applications. Beyond technical mastery, he has spearheaded business development units, driving growth in production and services while shaping strategic partnerships across the Asia Pacific and Middle East energy value chain.</p>
+            </div>
+            <!-- Mobile Gap -->
+            <div class="block md:hidden h-8"></div>
+
+            <!-- LEVEL 2: Sajahan & Morgan -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 lg:gap-8 items-stretch relative z-10">
+                
+                <!-- Sajahan Salman -->
+                <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
+                        <img src="images/sajahan.png" alt="Sajahan Salman" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-black text-[#183058] mb-1">Sajahan Salman</h4>
+                    <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">SVP Upstream & Downstream Operations</p>
+                    <p class="text-slate-500 text-sm leading-relaxed flex-grow">A seasoned Oil & Gas executive with more than two decades of hands‑on leadership across offshore and onshore operations. Sajahan has directed complex upstream facilities, including water injection systems at Petronas Carigali Platform, and advanced production chemical programs such as production chemical testing and applications. Beyond technical mastery, he has spearheaded business development units, driving growth in production and services while shaping strategic partnerships across the Asia Pacific and Middle East energy value chain.</p>
+                </div>
+
+                <!-- Morgan Teh -->
+                <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
+                        <img src="images/morgan.png" alt="Morgan Teh" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-black text-[#183058] mb-1">Morgan Teh</h4>
+                    <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">EVP Global Corporate Affairs & Investment</p>
+                    <p class="text-slate-500 text-sm leading-relaxed flex-grow">A seasoned financial strategist with over a decade of leadership in capital ventures across Asia. Morgan has built a distinguished track record in structuring investments, driving corporate growth, and navigating complex regional markets. His expertise spans capital structuring, cross‑border investments, and corporate affairs, positioning him as a trusted architect of sustainable financial strategies and long-term value creation.</p>
+                </div>
+
             </div>
 
-            <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center delay-[200ms] hover:shadow-lg transition-shadow duration-300">
-                <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
-                    <img src="images/morgan.png" alt="Morgan Teh" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h4 class="text-xl font-black text-[#183058] mb-1">Morgan Teh</h4>
-                <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">EVP Global Corporate Affairs & Investment</p>
-                <p class="text-slate-500 text-sm leading-relaxed flex-grow">A seasoned financial strategist with over a decade of leadership in capital ventures across Asia. Morgan has built a distinguished track record in structuring investments, driving corporate growth, and navigating complex regional markets. His expertise spans capital structuring, cross‑border investments, and corporate affairs, positioning him as a trusted architect of sustainable financial strategies and long-term value creation.</p>
+            <!-- Connecting Lines: L2 to L3 (Desktop Only) -->
+            <div class="hidden md:grid grid-cols-2 gap-8 md:gap-4 lg:gap-8">
+                <div class="flex justify-center"><div class="w-0.5 h-10 bg-slate-300"></div></div>
+                <div class="flex justify-center"><div class="w-0.5 h-10 bg-slate-300"></div></div>
             </div>
+            <!-- Mobile Gap -->
+            <div class="block md:hidden h-8"></div>
 
-        </div>
+            <!-- LEVEL 3: Ariff & Isqandar -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 lg:gap-8 items-stretch relative z-10">
+                
+                <!-- Mohamad Ariff -->
+                <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
+                        <img src="images/arif.png" alt="Mohamad Ariff" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-black text-[#183058] mb-1">Mohamad Ariff</h4>
+                    <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">Head of Middle East Corporate Investment</p>
+                    <p class="text-slate-500 text-sm leading-relaxed flex-grow">With over a decade of experience in cross‑border relations and corporate investment, Mohamad Ariff has cultivated deep ties across Middle East markets. His track record spans strategic business development, regional partnerships, and investment leadership, positioning him as a trusted bridge between global capital and regional opportunities. Guiding corporate growth through regulatory insight and market intelligence, he has consistently delivered sustainable expansion.</p>
+                </div>
 
-        <!-- Bottom Row: 2 Members (Centered) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8 items-stretch">
+                <!-- Isqandar Dzulkarnaen -->
+                <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
+                        <img src="images/isqandar.png" alt="Isqandar Dzulkarnaen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-black text-[#183058] mb-1">Isqandar Dzulkarnaen</h4>
+                    <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">Head of South Asia Corporate Dev</p>
+                    <p class="text-slate-500 text-sm leading-relaxed flex-grow">With over a decade of international market development expertise, Isqandar has been instrumental in shaping growth strategies across Southeast Asia. His leadership blends deep regional insight with global corporate vision, driving cross‑border partnerships, regulatory alignment, and sustainable expansion. Recognized for his ability to unlock opportunities in diverse markets, Isqandar has consistently advanced business development initiatives.</p>
+                </div>
+
+            </div>
             
-            <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center delay-[300ms] hover:shadow-lg transition-shadow duration-300">
-                <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
-                    <img src="images/arif.png" alt="Mohamad Ariff" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h4 class="text-xl font-black text-[#183058] mb-1">Mohamad Ariff</h4>
-                <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">Head of Middle East Corporate Investment</p>
-                <p class="text-slate-500 text-sm leading-relaxed flex-grow">With over a decade of experience in cross‑border relations and corporate investment, Mohamad Ariff has cultivated deep ties across Middle East markets. His track record spans strategic business development, regional partnerships, and investment leadership, positioning him as a trusted bridge between global capital and regional opportunities. Guiding corporate growth through regulatory insight and market intelligence, he has consistently delivered sustainable expansion.</p>
-            </div>
-
-            <div class="reveal bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center delay-[400ms] hover:shadow-lg transition-shadow duration-300">
-                <div class="w-40 h-40 rounded-full bg-gae-blue flex items-center justify-center mb-6 shadow-md border-4 border-slate-50 overflow-hidden group relative shrink-0">
-                    <img src="images/isqandar.png" alt="Isqandar Dzulkarnaen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h4 class="text-xl font-black text-[#183058] mb-1">Isqandar Dzulkarnaen</h4>
-                <p class="text-[#F29631] text-[11px] font-bold uppercase tracking-wider mb-4">Head of South Asia Corporate Development</p>
-                <p class="text-slate-500 text-sm leading-relaxed flex-grow">With over a decade of international market development expertise, Isqandar has been instrumental in shaping growth strategies across Southeast Asia. His leadership blends deep regional insight with global corporate vision, driving cross‑border partnerships, regulatory alignment, and sustainable expansion. Recognized for his ability to unlock opportunities in diverse markets, Isqandar has consistently advanced business development initiatives.</p>
-            </div>
-
         </div>
     </div>
 </section>
