@@ -48,63 +48,102 @@
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-[#F29631] selection:text-white">
 
-  <!-- Navbar: White Version -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white py-3 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-12">
+<!-- Navbar: White Version -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white py-3 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-12">
         
-        <!-- Logo -->
-        <a href="#" class="flex items-center space-x-2 group">
-          <div class="transform group-hover:scale-105 transition-transform duration-300">
-            <img src="images/favic.png" alt="Glory Asia Energy" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-md" />
-          </div>
-          <div class="flex items-center ml-2 space-x-1.5 sm:space-x-2">
-          <span class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-[#183058]">GLORY ASIA</span>
-            <span class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-[#F29631]">ENERGY</span>
-          </div>
-        </a>
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2 group">
+                <div class="transform group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/favic.png" alt="Glory Asia Energy" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-md" />
+                </div>
+                <div class="flex items-center ml-2 space-x-1.5 sm:space-x-2">
+                    <span class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-[#183058]">GLORY ASIA</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wide uppercase leading-none transition-colors duration-300 text-[#F29631]">ENERGY</span>
+                </div>
+            </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex space-x-5 items-center">
-          <a href="#about" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">About Us</a>
-          <a href="#expertise" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Expertise</a>
-          <a href="#pillars" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Value Pillars</a>
-          <a href="#cases" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Track Record</a>
-          <a href="#consortium" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Consortium</a>
-          <a href="#team" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Team</a>
-          <a href="#gallery" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Gallery</a>
-          <a href="#workpack" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange">Workpacks</a>
-          <a href="#contact" class="bg-[#F29631] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-orange-600 transition-all shadow-md hover:shadow-orange-500/40 hover:-translate-y-0.5">
-            Partner With Us
-          </a>
-        </div>
+            <!-- Desktop Menu (Grouped with Dropdowns) -->
+            <div class="hidden lg:flex space-x-6 items-center">
+                
+                <!-- Dropdown 1: Company -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs font-bold tracking-wider uppercase text-slate-600 group-hover:text-gae-orange py-2 transition-colors focus:outline-none">
+                        Company
+                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div class="absolute top-full -left-4 mt-2 w-48 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="#about" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">About Us</a>
+                        <a href="#pillars" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Value Pillars</a>
+                        <a href="#team" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Management Team</a>
+                    </div>
+                </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden flex items-center">
-          <button id="mobile-menu-btn" class="focus:outline-none transition-colors text-[#183058] p-1">
-            <i data-lucide="menu" id="menu-icon-open" class="w-7 h-7"></i>
-            <i data-lucide="x" id="menu-icon-close" class="w-7 h-7 hidden"></i>
-          </button>
+                <!-- Dropdown 2: Operations -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs font-bold tracking-wider uppercase text-slate-600 group-hover:text-gae-orange py-2 transition-colors focus:outline-none">
+                        Operations
+                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div class="absolute top-full -left-4 mt-2 w-52 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="#expertise" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Core Expertise</a>
+                        <a href="#cases" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Track Record</a>
+                        <a href="#workpack" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Workpacks</a>
+                        <a href="#consortium" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Consortium</a>
+                    </div>
+                </div>
+
+                <!-- Single Link: Gallery -->
+                <a href="#gallery" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange py-2 transition-colors">Gallery</a>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="bg-[#F29631] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-orange-600 transition-all shadow-md hover:shadow-orange-500/40 hover:-translate-y-0.5 ml-2">
+                    Partner With Us
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobile-menu-btn" class="focus:outline-none transition-colors text-[#183058] p-1">
+                    <i data-lucide="menu" id="menu-icon-open" class="w-7 h-7"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="w-7 h-7 hidden"></i>
+                </button>
+            </div>
         </div>
-      </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl mt-2 pb-4 px-4">
-      <div class="flex flex-col space-y-1 mt-2 text-center">
-        <a href="#about" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">About Us</a>
-        <a href="#expertise" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Core Expertise</a>
-        <a href="#pillars" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Value Pillars</a>
-        <a href="#cases" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Track Record</a>
-        <a href="#consortium" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Consortium</a>
-        <a href="#team" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Team</a>
-        <a href="#gallery" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Gallery</a>
-        <a href="#workpack" class="mobile-link block px-4 py-2.5 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Workpacks</a>
-        <a href="#contact" class="mobile-link block mt-2 bg-[#F29631] text-white px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-blue-900 transition-colors shadow-sm">Partner With Us</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Mobile Dropdown Menu (Organized by Categories) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl mt-2 pb-6 px-4 max-h-[80vh] overflow-y-auto">
+        <div class="flex flex-col space-y-1 mt-2 text-center">
+            
+            <!-- Category: Company -->
+            <div class="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 mt-4">Company</div>
+            <a href="#about" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">About Us</a>
+            <a href="#pillars" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Value Pillars</a>
+            <a href="#team" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Management Team</a>
 
+            <!-- Category: Operations -->
+            <div class="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 mt-4">Operations</div>
+            <a href="#expertise" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Core Expertise</a>
+            <a href="#cases" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Track Record</a>
+            <a href="#workpack" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Workpacks</a>
+            <a href="#consortium" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Consortium</a>
+
+            <!-- Category: Media & Contact -->
+            <div class="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 mt-4">Media</div>
+            <a href="#gallery" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Gallery</a>
+
+            <!-- Mobile CTA Button -->
+            <div class="mt-4 pt-4 border-t border-slate-100">
+                <a href="#contact" class="mobile-link block bg-[#F29631] text-white px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-orange-600 transition-colors shadow-sm">Partner With Us</a>
+            </div>
+            
+        </div>
+    </div>
+</nav>
   <!-- Hero Section -->
   <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-[#183058]">
         <!-- Background Effects -->
