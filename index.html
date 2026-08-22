@@ -105,48 +105,49 @@
 
   <!-- Hero Section -->
   <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#183058]">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5176A2]/30 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F29631]/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
-        
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="images/firstpage.png" 
-            alt="Industrial Energy" 
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#183058] via-[#183058]/95 to-transparent"></div>
+    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5176A2]/30 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F29631]/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+    
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="images/firstpage.png" 
+        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80';"
+        alt="Industrial Energy" 
+        class="w-full h-full object-cover opacity-40"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-[#183058] via-[#183058]/95 to-transparent"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16">
+      <div class="reveal max-w-3xl">
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-[#F29631] animate-ping"></span>
+          <span class="w-2 h-2 rounded-full bg-[#F29631] absolute"></span>
+          <span class="pl-2">PIONEERING TECHNOLOGY & SUSTAINABLE ENERGY</span>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16">
-          <RevealOnScroll delay={100} className="max-w-3xl">
-            <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-[#F29631] animate-ping"></span>
-              <span className="w-2 h-2 rounded-full bg-[#F29631] absolute"></span>
-              <span className="pl-2">Best Available Technology (BAT)</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-              Glory Asia <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-yellow-400 drop-shadow-sm">Energy</span>
-            </h1>
-            
-            <p className="text-base md:text-xl text-blue-100/80 mb-10 leading-relaxed font-light max-w-2xl">
-              Empowering Global Energy Transformation through Mineral Resource Development & Advanced Oil &
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
+          Glory Asia <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-yellow-400 drop-shadow-sm">Energy</span>
+        </h1>
+        
+        <p class="text-base md:text-xl text-blue-100/80 mb-10 leading-relaxed font-light max-w-2xl">
+          Empowering Global Energy Transformation through Mineral Resource Development & Advanced Oil &
 Gas Engineering Services. Led by Founder & Group President, Mr. David Xu-driven by "Technology-
 Enabled, Green-Driven, Value-Creating" core concepts.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#expertise" className="flex items-center justify-center bg-[#F29631] text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(242,150,49,0.3)] hover:shadow-[0_0_30px_rgba(242,150,49,0.5)] hover:-translate-y-0.5">
-                Explore Solutions <ArrowRight size={18} className="ml-2" />
-              </a>
-              <a href="#consortium" className="flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider border border-white/30 hover:border-white hover:bg-white/10 transition-all">
-                Our Partnerships
-              </a>
-            </div>
-          </RevealOnScroll>
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#expertise" class="inline-flex items-center justify-center bg-[#F29631] text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(242,150,49,0.3)] hover:shadow-[0_0_30px_rgba(242,150,49,0.5)] hover:-translate-y-0.5">
+            Explore Solutions <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+          </a>
+          <a href="#consortium" class="inline-flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider border border-white/30 hover:border-white hover:bg-white/10 transition-all">
+            Our Partnerships
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
   <!-- Stats Bar -->
   <section class="relative -mt-12 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
