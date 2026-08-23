@@ -944,229 +944,257 @@
   </script>
   <!-- roadmap scriptt end -->
 
-  <section id="cases" class="py-24 bg-[#F8FAFC] relative border-y border-slate-200 overflow-hidden">
+<section id="cases" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
     
-    <!-- Decorative background elements -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-50/50 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
+    <!-- Decorative background blobs (hidden on very small screens for better performance) -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 hidden sm:block">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-orange-100/40 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
     </div>
 
-    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal text-center max-w-3xl mx-auto mb-12 md:mb-16">
         <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-2 rounded-full mb-6 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-[#F29631] animate-pulse"></div>
-          <h2 class="text-[#183058] font-bold tracking-widest uppercase text-[11px]">Proven Track Record</h2>
+          <h2 class="text-[#183058] font-bold tracking-widest uppercase text-[10px] sm:text-[11px]">Proven Track Record</h2>
         </div>
-        <h3 class="text-4xl md:text-5xl font-black text-[#183058] mb-6 tracking-tight leading-tight">
-          Brownfield Well <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#183058] to-[#3b82f6]">Rejuvenation Projects</span>
+        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#183058] mb-4 md:mb-6 tracking-tight leading-tight">
+          Brownfield Well <br class="hidden sm:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#183058] to-[#3b82f6]">Rejuvenation Projects</span>
         </h3>
-        <p class="text-slate-500 text-lg leading-relaxed max-w-2xl mx-auto">
+        <p class="text-slate-500 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto px-2">
           Demonstrating operational excellence and high recovery rates across various mature energy infrastructure environments globally.
         </p>
       </div>
 
-      <div class="reveal">
+      <!-- grid-cols-1 on mobile, 2 on tablet, 3 on desktop -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
         
-          <p class="text-sm text-slate-400 mt-2 md:mt-0 italic flex items-center">
-            <i data-lucide="arrow-right-left" class="w-4 h-4 mr-2"></i> Scroll horizontally to view all details
-          </p>
+        <!-- Card 1 -->
+        <div class="reveal delay-100 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">1</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Nov-25
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Integrated Scheme for ARIÑA Block, Venezuela</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">Design of 48 new heavy oil wells + Production resumption of 40 old wells</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">PDVSA</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="overflow-x-auto custom-scrollbar pb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
-          <!-- border-separate and border-spacing-y create the "floating row" effect -->
-          <table class="w-full text-left border-collapse border-separate border-spacing-y-3 min-w-[1000px]">
-            <thead>
-              <tr class="text-xs uppercase tracking-wider text-slate-500 font-bold bg-transparent">
-                <th class="px-6 py-3 w-20 text-center">No.</th>
-                <th class="px-6 py-3 w-1/4">Project Name</th>
-                <th class="px-6 py-3 w-1/3">Project Scope</th>
-                <th class="px-6 py-3 w-1/5">Owner</th>
-                <th class="px-6 py-3 w-32">Date</th>
-              </tr>
-            </thead>
-            
-            <tbody class="text-sm">
-              
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    1
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Integrated Scheme for ARIÑA Block, Venezuela</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  Design of 48 new heavy oil wells + Production resumption of 40 old wells
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    PDVSA
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Nov-25
-                  </span>
-                </td>
-              </tr>
-
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    2
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Pilot Production Resumption of Low-efficiency Heavy Oil Wells in Deep Strata of Xianhe, Shengli Oilfield</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  Geological re-evaluation of 12 heavy oil wells + Nano viscosity reduction huff and puff + Electric pump lifting
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    Xianhe Oil Production Plant, Sinopec
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jan-24
-                  </span>
-                </td>
-              </tr>
-
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    3
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Reconstruction of High-viscosity Sand-producing Deep Wells</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  Casing repair, TSO sand control and nano-chemical huff and puff for 8 pilot wells
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    Heavy Oil Development Company, Liaohe Oilfield
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jul-22
-                  </span>
-                </td>
-              </tr>
-
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    4
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Comprehensive Treatment of Shut-in Wells in Old Heavy Oil Blocks</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  Root cause diagnosis, paraffin and plugging removal and long-acting viscosity reduction huff and puff for 22 shut-in wells
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    Bohai Branch, CNOOC
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Nov-23
-                  </span>
-                </td>
-              </tr>
-
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    5
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Integrated Production Resumption of 10 Overseas Heavy Oil Pilot Wells</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  Complete production resumption process for 10 high-viscosity, corrosive and scaling pilot wells
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    Amal Oilfield, Harouge Energy
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jan-24
-                  </span>
-                </td>
-              </tr>
-
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    6
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Comprehensive Treatment Project for 13 Heavy Oil Pilot Wells in Keqian Block, Xinjiang</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  Integrated production resumption of 13 shut-in heavy oil wells
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    Heavy Oil Company, Xinjiang Oilfield
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> May-22
-                  </span>
-                </td>
-              </tr>
-
-              <tr class="group bg-white hover:bg-[#fcfdfd] transition-all duration-300 shadow-sm hover:shadow-md">
-                <td class="p-4 rounded-l-2xl border-l-4 border-transparent group-hover:border-[#F29631] transition-colors">
-                  <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-[#183058] font-bold text-lg group-hover:bg-[#183058] group-hover:text-white transition-colors">
-                    7
-                  </div>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <h5 class="text-[#183058] font-bold text-base mb-1">Pilot Repair Project of Long-shut Heavy Oil Wells in Block 3</h5>
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors text-slate-600 leading-relaxed">
-                  34 shut-in wells with the first batch of 10 pilot wells implemented
-                </td>
-                <td class="p-6 border-t border-b border-slate-100 group-hover:border-transparent transition-colors">
-                  <div class="flex items-center text-slate-700 font-medium">
-                    <i data-lucide="building-2" class="w-4 h-4 mr-2 text-slate-400 group-hover:text-[#F29631] transition-colors"></i>
-                    Gaosheng Oil Production Plant, Liaohe Oilfield
-                  </div>
-                </td>
-                <td class="p-6 rounded-r-2xl border-t border-b border-r border-slate-100 group-hover:border-transparent transition-colors">
-                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-medium text-xs whitespace-nowrap group-hover:bg-blue-100 group-hover:text-blue-800 transition-colors">
-                    <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jun-25
-                  </span>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
+        <!-- Card 2 -->
+        <div class="reveal delay-200 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">2</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jan-24
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Pilot Production Resumption of Low-efficiency Heavy Oil Wells in Deep Strata of Xianhe</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">Geological re-evaluation of 12 wells + Nano viscosity reduction huff & puff + Electric pump lifting</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">Xianhe Oil Production Plant, Sinopec</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Card 3 -->
+        <div class="reveal delay-300 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">3</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jul-22
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Reconstruction of High-viscosity Sand-producing Deep Wells</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">Casing repair, TSO sand control and nano-chemical huff and puff for 8 pilot wells</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">Heavy Oil Development Company, Liaohe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="reveal delay-100 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">4</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Nov-23
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Comprehensive Treatment of Shut-in Wells in Old Heavy Oil Blocks</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">Root cause diagnosis, paraffin & plugging removal, long-acting viscosity reduction for 22 shut-in wells</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">Bohai Branch, CNOOC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="reveal delay-200 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">5</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jan-24
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Integrated Production Resumption of 10 Overseas Heavy Oil Pilot Wells</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">Complete production resumption process for 10 high-viscosity, corrosive and scaling pilot wells</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">Amal Oilfield, Harouge Energy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="reveal delay-300 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">6</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> May-22
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Comprehensive Treatment Project for 13 Heavy Oil Pilot Wells in Keqian Block</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">Integrated production resumption of 13 shut-in heavy oil wells in Xinjiang</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">Heavy Oil Company, Xinjiang Oilfield</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 (Centered on large screens if odd number) -->
+        <div class="reveal delay-100 lg:col-start-2 bg-white rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 border-l-4 border-l-[#183058] hover:border-l-[#F29631] hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+          <div class="flex justify-between items-center mb-4">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-50 text-[#183058] font-bold text-sm group-hover:bg-[#183058] group-hover:text-white transition-colors">7</span>
+            <span class="inline-flex items-center text-xs font-semibold text-[#F29631] bg-orange-50 px-3 py-1.5 rounded-full">
+              <i data-lucide="calendar" class="w-3 h-3 mr-1.5"></i> Jun-25
+            </span>
+          </div>
+          <h4 class="text-lg font-bold text-[#183058] mb-4 leading-snug group-hover:text-blue-600 transition-colors">Pilot Repair Project of Long-shut Heavy Oil Wells in Block 3</h4>
+          
+          <div class="mt-auto space-y-4 flex-grow flex flex-col justify-end">
+            <div class="flex items-start">
+              <div class="bg-blue-50/50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-4 h-4 text-blue-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Project Scope</span>
+                <p class="text-sm text-slate-600 leading-relaxed">34 shut-in wells with the first batch of 10 pilot wells implemented</p>
+              </div>
+            </div>
+            <div class="flex items-start pt-3 border-t border-slate-50">
+              <div class="bg-slate-50 p-1.5 rounded-md mr-3 shrink-0 mt-0.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Owner</span>
+                <p class="text-sm font-semibold text-slate-700">Gaosheng Oil Production Plant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
