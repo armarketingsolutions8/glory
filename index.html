@@ -1618,8 +1618,14 @@
     </div>
   </section>
 
-  <!-- Contact & Footer Section -->
+ <!-- Contact & Footer Section -->
   <footer id="contact" class="bg-[#183058] pt-16 pb-12 relative overflow-hidden text-white">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#F29631]/5 rounded-full blur-3xl"></div>
+    </div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="grid lg:grid-cols-12 gap-8 items-start mb-16">
@@ -1627,14 +1633,22 @@
         <!-- Left Box -->
         <div class="lg:col-span-5 bg-gradient-to-br from-blue-900/60 to-slate-900/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl flex flex-col justify-between min-h-[300px]">
           <div>
-            <img src="images/favic.png" onerror="this.onerror=null; this.src='https://placehold.co/48x48/183058/F29631?text=GAE';" alt="Glory Asia Energy" class="w-12 h-12 object-contain mb-6 brightness-0 invert" />
+            <img src="images/favic.png" onerror="this.onerror=null; this.src='https://placehold.co/48x48/183058/F29631?text=GAE';" alt="Glory Asia Energy" class="w-12 h-12 object-contain mb-6 rounded shadow-sm" />
             <h3 class="text-3xl font-black text-white leading-tight mb-4">
               Partnering for <br />
               <span class="text-[#F29631]">Energy Excellence</span>
             </h3>
-            <p class="text-blue-100/70 text-sm leading-relaxed">
+            <p class="text-blue-100/70 text-sm leading-relaxed mb-8">
               Let's collaborate to transform your mature brownfield assets into sustainable, high-performing energy infrastructure.
             </p>
+            
+            <!-- Legal Anchor Badge: Keeps brand bold but shows supporting anchor -->
+            <div class="inline-flex items-center space-x-2 bg-black/20 border border-white/5 rounded-lg px-3 py-2 backdrop-blur-md">
+              <i data-lucide="shield-check" class="w-4 h-4 text-[#F29631]"></i>
+              <span class="text-[9px] sm:text-[10px] text-blue-200/80 uppercase tracking-wider font-semibold">
+                Powered by Glory Asia Sdn Bhd (1274806-D)
+              </span>
+            </div>
           </div>
         </div>
 
@@ -1643,10 +1657,15 @@
           <div class="flex items-center space-x-2 text-xs font-bold text-[#F29631] uppercase tracking-widest mb-2">
             <span>Contact Information</span>
           </div>
-          <h4 class="text-2xl font-black text-[#183058] mb-6">Glory Asia Energy</h4>
+          
+          <!-- Brand Header with Legal Subtitle -->
+          <h4 class="text-2xl font-black text-[#183058] mb-1">Glory Asia Energy</h4>
+          <p class="text-[11px] sm:text-xs text-slate-500 font-semibold mb-6 uppercase tracking-wide">
+            Inquiries managed by Glory Asia Sdn Bhd (1274806‑D)
+          </p>
 
           <div class="space-y-4">
-            <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+            <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100 transition-colors hover:bg-slate-100/80">
               <div class="p-3 bg-blue-50 text-[#183058] rounded-xl flex-shrink-0">
                 <i data-lucide="map-pin" class="w-5 h-5"></i>
               </div>
@@ -1659,7 +1678,7 @@
               </div>
             </div>
 
-            <div class="flex items-center space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+            <div class="flex items-center space-x-4 bg-slate-50 p-4 rounded-2xl border border-slate-100 transition-colors hover:bg-slate-100/80">
               <div class="p-3 bg-orange-50 text-[#F29631] rounded-xl flex-shrink-0">
                 <i data-lucide="mail" class="w-5 h-5"></i>
               </div>
@@ -1675,9 +1694,15 @@
 
       </div>
 
-      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-blue-200/60">
-        <p>&copy; 2026 Glory Asia Energy Sdn Bhd. All rights reserved.</p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
+      <!-- Footer Bottom: Copyright & Legal Text -->
+      <div class="pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-start lg:items-center text-xs text-blue-200/60 gap-6">
+        <div class="flex flex-col space-y-1.5 max-w-2xl">
+          <p class="font-medium text-blue-100/90 text-sm">&copy; 2026 Glory Asia Energy. All rights reserved.</p>
+          <p class="text-[11px] leading-relaxed">
+            Glory Asia Energy is a project brand operated under Glory Asia Sdn Bhd (Co. Registration No: 1274806‑D).
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 mt-2 lg:mt-0">
           <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-white transition-colors">Terms and Conditions</a>
         </div>
