@@ -796,104 +796,201 @@
     </div>
   </section>
 
- <!-- Consortium Section -->
-<section id="consortium" class="py-20 bg-white relative">
-  
-  <!-- Decorative Background Blurs (Optional for modern feel) -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
-    <div class="absolute top-40 right-10 w-72 h-72 bg-orange-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consortium Section</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Optional: Add custom animations or styles here if needed, though Tailwind handles most */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 antialiased font-sans">
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    
-    <!-- Section Header -->
-    <div class="reveal text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 border border-orange-100 shadow-sm">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#F29631]"></span>
-        </span>
-        <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-xs">Partnership Ecosystem</h2>
-      </div>
-      <h3 class="text-4xl md:text-5xl font-black text-[#183058] mb-6 tracking-tight leading-tight">
-        Consortium Roles & <br> 
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#183058] to-[#5176A2]">Collaboration Structure</span>
-      </h3>
-      <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-        Our resilient consortium model guarantees technical excellence backed by deep local integration and regulatory compliance.
-      </p>
-    </div>
-
-    <!-- Cards Grid -->
-    <div class="relative grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-
-      <!-- Middle Connector Icon (Hidden on mobile, visible on desktop) -->
-      <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full shadow-xl border-4 border-slate-50 items-center justify-center z-20 group transition-transform hover:scale-110 duration-300">
-        <i data-lucide="link" class="text-[#F29631] w-6 h-6 transition-transform group-hover:rotate-45"></i>
-      </div>
-
-      <!-- Card 1: Glory Asia -->
-      <div class="reveal bg-gradient-to-br from-[#183058] via-[#1f3d6b] to-[#122442] rounded-[2rem] p-8 md:p-10 text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-white/10">
-        <!-- Shine effect -->
-        <div class="absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br from-white/10 to-transparent rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
+    <!-- Consortium Section -->
+    <section id="consortium" class="py-20 bg-white relative overflow-hidden">
         
-        <div class="relative z-10">
-          <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/5 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
-            <i data-lucide="building-2" class="text-[#F29631] w-8 h-8"></i>
-          </div>
-          <h4 class="text-2xl md:text-3xl font-black mb-2 tracking-tight">Glory Asia Energy</h4>
-          <p class="text-[#F29631] text-xs uppercase tracking-widest font-bold mb-8">Technology & Funding</p>
-          
-          <ul class="space-y-4 text-blue-100/90 text-sm leading-relaxed">
-            <li class="flex items-start gap-3">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
-              <span>Supplying advanced <strong>Best Available Technology (BAT)</strong></span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
-              <span>Providing specialized engineering equipment</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
-              <span>Full capital funding options & feasibility studies</span>
-            </li>
-          </ul>
+        <!-- Decorative Background Blurs (Optional for modern feel) -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none z-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+            <div class="absolute top-40 right-10 w-72 h-72 bg-orange-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
         </div>
-      </div>
 
-      <!-- Card 2: Local Partners -->
-      <div class="reveal bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
-        <!-- Subtle background glow -->
-        <div class="absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br from-orange-50 to-slate-50 rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
-        
-        <div class="relative z-10">
-          <div class="bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:bg-orange-50 transition-all duration-300">
-            <i data-lucide="users" class="text-[#5176A2] w-8 h-8"></i>
-          </div>
-          <h4 class="text-2xl md:text-3xl font-black text-[#183058] mb-2 tracking-tight">Local Partners</h4>
-          <p class="text-[#5176A2] text-xs uppercase tracking-widest font-bold mb-8">Local Content & Ops</p>
-          
-          <ul class="space-y-4 text-slate-600 text-sm leading-relaxed">
-            <li class="flex items-start gap-3">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5"></i>
-              <span>Securing strategic local projects</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5"></i>
-              <span>Directing government licensing & regulatory compliance</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5"></i>
-              <span>Handling operational execution & logistics support</span>
-            </li>
-          </ul>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="reveal text-center max-w-4xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 border border-orange-100 shadow-sm">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#F29631]"></span>
+                    </span>
+                    <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-xs">Partnership Ecosystem</h2>
+                </div>
+                <h3 class="text-4xl md:text-5xl font-black text-[#183058] mb-6 tracking-tight leading-tight">
+                    Consortium Roles & <br> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#183058] to-[#5176A2]">Collaboration Structure</span>
+                </h3>
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-medium mb-6">
+                    Our consortium framework ensures enduring strength by combining global expertise with local depth. It is designed to deliver:
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left max-w-5xl mx-auto text-sm text-slate-600">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <strong class="text-[#183058] block mb-1">Technical excellence:</strong>
+                        Leveraging advanced technology and specialized engineering to guarantee superior project outcomes.
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <strong class="text-[#183058] block mb-1">Local integration:</strong>
+                        Embedding operations within local ecosystems to strengthen community ties and operational resilience.
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <strong class="text-[#183058] block mb-1">Regulatory compliance:</strong>
+                        Aligning with national frameworks and industry standards to ensure seamless approvals and sustainable execution.
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <strong class="text-[#183058] block mb-1">Collaborative resilience:</strong>
+                        Balancing roles between global providers and local partners to safeguard continuity and shared prosperity.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="relative grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+
+                <!-- Middle Connector Icon (Hidden on mobile, visible on desktop) -->
+                <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full shadow-xl border-4 border-slate-50 items-center justify-center z-20 group transition-transform hover:scale-110 duration-300">
+                    <i data-lucide="link" class="text-[#F29631] w-6 h-6 transition-transform group-hover:rotate-45"></i>
+                </div>
+
+                <!-- Card 1: Glory Asia -->
+                <div class="reveal bg-gradient-to-br from-[#183058] via-[#1f3d6b] to-[#122442] rounded-[2rem] p-8 md:p-10 text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-white/10">
+                    <!-- Shine effect -->
+                    <div class="absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br from-white/10 to-transparent rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/5 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
+                            <i data-lucide="building-2" class="text-[#F29631] w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-black mb-1 tracking-tight">Glory Asia Energy</h4>
+                        <p class="text-blue-200 text-xs mb-4">Powered by Glory Asia Sdn Bhd (1274806D)</p>
+                        <p class="text-[#F29631] text-xs uppercase tracking-widest font-bold mb-6">Technology & Project Funding</p>
+                        
+                        <p class="text-blue-100/90 text-sm mb-6 leading-relaxed italic">
+                            Transforming energy projects with innovation and disciplined capital. We don't just supply solutions, we engineer sustainable growth.
+                        </p>
+
+                        <ul class="space-y-4 text-blue-100/90 text-sm leading-relaxed">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-white">Advanced BAT:</strong> Delivering cutting-edge Best Available Technology to raise industry standards.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-white">Specialized Equipment:</strong> Precision‑engineered tools that maximize upstream and downstream efficiency.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-white">Feasibility Anchored Funding:</strong> Capital structured around detailed case studies, ensuring technical and operational viability.</span>
+                            </li>
+                             <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-white">ROI driven investment:</strong> Funding scaled to projected returns, with milestone-based disbursement to safeguard capital.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Local Partners -->
+                <div class="reveal bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <!-- Subtle background glow -->
+                    <div class="absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br from-orange-50 to-slate-50 rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:bg-orange-50 transition-all duration-300">
+                            <i data-lucide="users" class="text-[#5176A2] w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-black text-[#183058] mb-1 tracking-tight">Local Partners</h4>
+                        <p class="text-transparent text-xs mb-4 select-none">Spacer</p> <!-- Spacer to align with left card -->
+                        <p class="text-[#5176A2] text-xs uppercase tracking-widest font-bold mb-6">Local Content & Operations</p>
+                        
+                         <p class="text-slate-600 text-sm mb-6 leading-relaxed italic">
+                            Anchoring global projects with local strength. Our partner network ensures every initiative is firmly rooted in the local landscape, combining compliance, execution, and strategic impact.
+                        </p>
+
+                        <ul class="space-y-4 text-slate-600 text-sm leading-relaxed">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-[#183058]">Strategic project access:</strong> Securing priority opportunities that align with national growth agendas.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-[#183058]">Regulatory alignment:</strong> Navigating government licensing and compliance frameworks with precision.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-[#183058]">Operational excellence:</strong> Managing execution and logistics seamlessly to guarantee delivery and continuity.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Simple Intersection Observer for the 'reveal' animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing once revealed
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1, // Trigger when 10% of the element is visible
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealObserver.observe(reveal);
+            });
+            
+            // Fallback for elements already in view on load
+            setTimeout(() => {
+                reveals.forEach(reveal => {
+                    const rect = reveal.getBoundingClientRect();
+                    if(rect.top < window.innerHeight) {
+                        reveal.classList.add('active');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
   
 
  <!-- Team Section (Organisation Chart Layout) -->
