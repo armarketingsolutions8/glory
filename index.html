@@ -481,40 +481,49 @@
     </section>
 
       
-  <!-- Our Core Value Pillars -->
-  <section id="pillars" class="py-24 bg-slate-900 relative overflow-hidden">
-    <!-- Modern animated background gradients & Glows -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[500px] bg-gradient-to-b from-[#183058]/40 to-transparent blur-[100px]"></div>
-
-        <!-- Ambient corner glows -->
-        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-[#F29631]/10 rounded-full blur-[120px]"></div>
-        <div class="absolute top-32 -right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-        <!-- Section Header -->
-        <div class="reveal text-center max-w-2xl mx-auto mb-20">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-white/10 bg-white/5 backdrop-blur-sm shadow-lg shadow-black/20">
-                <span class="w-2 h-2 rounded-full bg-[#F29631] animate-pulse"></span>
-                <h2 class="text-slate-300 font-bold tracking-widest uppercase text-xs">Our Philosophy</h2>
-            </div>
-            <h3 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
-                Our Core <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-orange-300">Value Pillars</span>
-            </h3>
-            <p class="text-slate-400 text-base md:text-lg">
-                The foundational principles that drive our commitment to excellence, safety, and sustainable partnerships.
-            </p>
+ <section id="pillars" class="py-24 relative overflow-hidden flex items-center justify-center min-h-screen">
+        
+        <!-- Animated Background & Grid -->
+        <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+        <div class="absolute inset-0 pointer-events-none overflow-hidden mix-blend-screen">
+            <!-- Top massive glow -->
+            <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-blue/20 rounded-full blur-[120px] style="animation: pulse-slow 8s infinite;""></div>
+            
+            <!-- Ambient corner glows -->
+            <div class="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-[100px]"></div>
+            <div class="absolute top-1/4 -right-32 w-[400px] h-[400px] bg-brand-emerald/10 rounded-full blur-[100px]"></div>
         </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            
+            <div class="text-center max-w-3xl mx-auto mb-24 reveal">
+                <!-- Eyebrow Pill -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-lg shadow-black/20 hover:bg-white/[0.05] transition-colors cursor-default">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-orange"></span>
+                    </span>
+                    <h2 class="text-slate-300 font-bold tracking-[0.2em] uppercase text-[11px]">Our Philosophy</h2>
+                </div>
+                
+                <!-- Main Title -->
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+                    Our Core <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-orange-300 to-amber-200">Value Pillars</span>
+                </h3>
+                
+                <!-- Description -->
+                <p class="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+                    <strong class="text-white font-semibold">Excellence, Safety, Sustainability.</strong><br class="hidden md:block">
+                    These foundational pillars define our philosophy and guide every partnership we build globally.
+                </p>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 relative">
+                
+                <!-- Decorative Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-[85px] left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0"></div>
 
-        <!-- Pillars Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 relative">    
-
-            <!-- Subtle connective line for desktop behind the cards -->
-            <div class="hidden md:block absolute top-[40%] left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2 z-0"></div>
-
-  <!-- Pillar 1: Risk-Aligned Partnerships -->
+                <!-- Pillar 1: Risk-Aligned Partnerships -->
                 <div class="relative z-10 group h-full">
                     <!-- Hover ambient background -->
                     <div class="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[2.5rem] blur-2xl"></div>
@@ -667,7 +676,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Execution Roadmap Section -->
     <title>Execution Roadmap & Gallery</title>
