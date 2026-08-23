@@ -483,106 +483,79 @@
       
             
             <!-- core value pillars) -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Core Value Pillars</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    <!-- Our Core Value Pillars -->
+    <section id="pillars" class="py-24 bg-slate-900 relative overflow-hidden">
+        <!-- Modern animated background gradients & Glows -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[500px] bg-gradient-to-b from-[#183058]/40 to-transparent blur-[100px]"></div>
+            <!-- Ambient corner glows -->
+            <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-[#F29631]/10 rounded-full blur-[120px]"></div>
+            <div class="absolute top-32 -right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
+        </div>
         
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            orange: '#F29631',
-                            blue: '#3B82F6',
-                            emerald: '#10B981'
-                        },
-                        app: {
-                            bg: '#0F1523',    /* Background asal yang dikekalkan */
-                            card: '#161D2E',  /* Warna kad asal */
-                            border: '#232D42',
-                            iconBg: '#0B101C'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-app-bg min-h-screen text-slate-200 antialiased selection:bg-brand-orange selection:text-white flex items-center justify-center">
-
-    <section id="pillars" class="py-24 relative w-full overflow-hidden">
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <!-- Section Header (Dikekalkan seperti imej asal) -->
-            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
-                <!-- Eyebrow Pill -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 border border-white/10 bg-app-card shadow-lg shadow-black/20">
-                    <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
-                    <h2 class="text-slate-300 font-bold tracking-widest uppercase text-[10px]">Our Philosophy</h2>
+            <!-- Section Header -->
+            <div class="reveal text-center max-w-2xl mx-auto mb-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-white/10 bg-white/5 backdrop-blur-sm shadow-lg shadow-black/20">
+                    <span class="w-2 h-2 rounded-full bg-[#F29631] animate-pulse"></span>
+                    <h2 class="text-slate-300 font-bold tracking-widest uppercase text-xs">Our Philosophy</h2>
                 </div>
-                
-                <!-- Main Title -->
-                <h3 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">
-                    Our Core <span class="text-brand-orange">Value Pillars</span>
+                <h3 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+                    Our Core <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-orange-300">Value Pillars</span>
                 </h3>
-                
-                <!-- Description -->
-                <p class="text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-2xl mx-auto px-4">
-                    The foundational principles that drive our commitment to excellence,<br class="hidden md:block"> 
-                    safety, and sustainable partnerships.
+                <p class="text-slate-400 text-base md:text-lg">
+                    <strong class="text-slate-200">Excellence, Safety, Sustainability.</strong><br>
+                    These pillars define our philosophy and guide every partnership we build.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 relative max-w-6xl mx-auto">
+            <!-- Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 relative">
                 
+                <!-- Subtle connective line for desktop behind the cards -->
+                <div class="hidden md:block absolute top-[120px] left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0"></div>
+
                 <!-- Pillar 1: Risk-Aligned Partnerships -->
-                <div class="relative z-10 group h-full">
-                    <!-- Hover ambient glow -->
-                    <div class="absolute inset-0 bg-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] blur-xl"></div>
+                <div class="reveal relative z-10 group h-full">
+                    <!-- Hover ambient background -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#F29631]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] blur-xl"></div>
                     
-                    <!-- Card Body -->
-                    <div class="relative h-full bg-app-card p-8 rounded-[2rem] border border-app-border transition-all duration-500 hover:border-brand-orange/30 hover:-translate-y-2 flex flex-col shadow-xl shadow-black/40 overflow-hidden text-left">
-                        
+                    <!-- Card -->
+                    <div class="relative h-full bg-slate-800/40 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-[#F29631]/30 transition-all duration-500 hover:-translate-y-2 flex flex-col shadow-2xl shadow-black/50 overflow-hidden">
                         <!-- Top Accent Line -->
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-orange to-transparent opacity-80"></div>
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F29631] to-transparent opacity-70"></div>
                         
                         <!-- Icon -->
-                        <div class="relative w-14 h-14 mb-8 shrink-0">
-                            <div class="absolute inset-0 bg-brand-orange/20 rounded-2xl blur-lg group-hover:bg-brand-orange/40 transition-all duration-300"></div>
-                            <div class="relative w-full h-full bg-app-iconBg rounded-2xl flex items-center justify-center border border-white/5 shadow-inner transition-transform duration-500 group-hover:scale-110">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-brand-orange"></i>
+                        <div class="relative w-16 h-16 mb-8 shrink-0">
+                            <div class="absolute inset-0 bg-[#F29631]/20 rounded-2xl blur-lg group-hover:bg-[#F29631]/40 transition-all duration-300"></div>
+                            <div class="relative w-full h-full bg-slate-900 rounded-2xl border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-[#F29631]/50 transition-all duration-300 shadow-xl">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-[#F29631]"></i>
                             </div>
                         </div>
                         
                         <!-- Content -->
-                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-1 group-hover:text-brand-orange transition-colors leading-tight">Risk-Aligned<br>Partnerships</h4>
-                        <p class="text-brand-orange font-medium text-xs mb-4 uppercase tracking-wider">Assurance First</p>
+                        <h4 class="text-2xl font-bold text-white mb-2 group-hover:text-[#F29631] transition-colors leading-tight">Risk-Aligned<br>Partnerships</h4>
+                        <p class="text-[#F29631] font-medium text-sm mb-4">Assurance without upfront risk.</p>
                         
-                        <p class="text-slate-400 text-[13px] md:text-sm leading-relaxed mb-8">
-                            Championing a "No Cure, No Pay" commercial model, aligning success directly with partner returns and assuming project risk.
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            Our partnership model is designed so clients commit resources only when results are verified. This ensures every engagement is performance anchored, protecting client interests while fostering shared success.
                         </p>
-
-                        <!-- Card Footer / Details -->
-                        <div class="mt-auto pt-6 border-t border-white/5">
-                            <ul class="text-slate-400 text-[13px] space-y-3">
+                        
+                        <!-- Card Footer (Pushes to bottom to balance heights) -->
+                        <div class="mt-auto pt-6 border-t border-white/10">
+                            <ul class="text-slate-400 text-sm space-y-4">
                                 <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
-                                    <span><strong class="text-slate-200">Outcome-linked:</strong> Triggered only after milestones.</span>
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-[#F29631] shrink-0 mt-0.5"></i>
+                                    <span><strong class="text-slate-200">Outcome-linked:</strong> Triggered only after measurable milestones.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
-                                    <span><strong class="text-slate-200">Value assurance:</strong> Funding is tied to direct ROI.</span>
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-[#F29631] shrink-0 mt-0.5"></i>
+                                    <span><strong class="text-slate-200">Value assurance:</strong> Funding is tied to demonstrated ROI.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-[#F29631] shrink-0 mt-0.5"></i>
+                                    <span><strong class="text-slate-200">Resilience:</strong> Risks absorbed within consortium framework.</span>
                                 </li>
                             </ul>
                         </div>
@@ -590,87 +563,73 @@
                 </div>
 
                 <!-- Pillar 2: Technological Stewardship -->
-                <div class="relative z-10 group h-full">
-                    <!-- Hover ambient glow -->
-                    <div class="absolute inset-0 bg-brand-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] blur-xl"></div>
+                <div class="reveal relative z-10 group h-full delay-100">
+                    <!-- Hover ambient background -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] blur-xl"></div>
                     
-                    <!-- Card Body -->
-                    <div class="relative h-full bg-app-card p-8 rounded-[2rem] border border-app-border transition-all duration-500 hover:border-brand-blue/30 hover:-translate-y-2 flex flex-col shadow-xl shadow-black/40 overflow-hidden text-left">
-                        
+                    <!-- Card -->
+                    <div class="relative h-full bg-slate-800/40 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-blue-400/30 transition-all duration-500 hover:-translate-y-2 flex flex-col shadow-2xl shadow-black/50 overflow-hidden">
                         <!-- Top Accent Line -->
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue to-transparent opacity-80"></div>
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-transparent opacity-70"></div>
                         
                         <!-- Icon -->
-                        <div class="relative w-14 h-14 mb-8 shrink-0">
-                            <div class="absolute inset-0 bg-brand-blue/20 rounded-2xl blur-lg group-hover:bg-brand-blue/40 transition-all duration-300"></div>
-                            <div class="relative w-full h-full bg-app-iconBg rounded-2xl flex items-center justify-center border border-white/5 shadow-inner transition-transform duration-500 group-hover:scale-110">
-                                <i data-lucide="cpu" class="w-6 h-6 text-brand-blue"></i>
+                        <div class="relative w-16 h-16 mb-8 shrink-0">
+                            <div class="absolute inset-0 bg-blue-400/20 rounded-2xl blur-lg group-hover:bg-blue-400/40 transition-all duration-300"></div>
+                            <div class="relative w-full h-full bg-slate-900 rounded-2xl border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-blue-400/50 transition-all duration-300 shadow-xl">
+                                <i data-lucide="cpu" class="w-8 h-8 text-blue-400"></i>
                             </div>
                         </div>
                         
                         <!-- Content -->
-                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-1 group-hover:text-brand-blue transition-colors leading-tight">Technological<br>Stewardship</h4>
-                        <p class="text-brand-blue font-medium text-xs mb-4 uppercase tracking-wider">Innovation Led</p>
+                        <h4 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors leading-tight">Technological<br>Stewardship</h4>
+                        <p class="text-blue-400 font-medium text-sm mb-4">Leading with innovation.</p>
                         
-                        <p class="text-slate-400 text-[13px] md:text-sm leading-relaxed mb-8">
-                            Prioritizing Best Available Technology (BAT) that reduces carbon footprint, eliminates toxic exposure, and ensures zero-incident performance.
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            We champion <strong class="text-slate-200 font-semibold">Best Available Technology</strong> to cut carbon, eliminate hazards, and deliver zero‑incident performance.
                         </p>
-
-                        <!-- Card Footer / Details -->
-                        <div class="mt-auto pt-6 border-t border-white/5">
-                            <ul class="text-slate-400 text-[13px] space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0 mt-0.5"></i>
-                                    <span><strong class="text-slate-200">Sustainable:</strong> Significant carbon footprint reduction.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0 mt-0.5"></i>
-                                    <span><strong class="text-slate-200">Safety first:</strong> Zero-incident operational focus.</span>
-                                </li>
-                            </ul>
+                        
+                        <!-- Card Footer -->
+                        <div class="mt-auto pt-6 border-t border-white/10">
+                            <div class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                                <span>Protecting people and planet.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Pillar 3: Strategic Local Integration -->
-                <div class="relative z-10 group h-full">
-                    <!-- Hover ambient glow -->
-                    <div class="absolute inset-0 bg-brand-emerald/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] blur-xl"></div>
+                <div class="reveal relative z-10 group h-full delay-200">
+                    <!-- Hover ambient background -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-emerald-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] blur-xl"></div>
                     
-                    <!-- Card Body -->
-                    <div class="relative h-full bg-app-card p-8 rounded-[2rem] border border-app-border transition-all duration-500 hover:border-brand-emerald/30 hover:-translate-y-2 flex flex-col shadow-xl shadow-black/40 overflow-hidden text-left">
-                        
+                    <!-- Card -->
+                    <div class="relative h-full bg-slate-800/40 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-emerald-400/30 transition-all duration-500 hover:-translate-y-2 flex flex-col shadow-2xl shadow-black/50 overflow-hidden">
                         <!-- Top Accent Line -->
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-emerald to-transparent opacity-80"></div>
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-transparent opacity-70"></div>
                         
                         <!-- Icon -->
-                        <div class="relative w-14 h-14 mb-8 shrink-0">
-                            <div class="absolute inset-0 bg-brand-emerald/20 rounded-2xl blur-lg group-hover:bg-brand-emerald/40 transition-all duration-300"></div>
-                            <div class="relative w-full h-full bg-app-iconBg rounded-2xl flex items-center justify-center border border-white/5 shadow-inner transition-transform duration-500 group-hover:scale-110">
-                                <i data-lucide="map" class="w-6 h-6 text-brand-emerald"></i>
+                        <div class="relative w-16 h-16 mb-8 shrink-0">
+                            <div class="absolute inset-0 bg-emerald-400/20 rounded-2xl blur-lg group-hover:bg-emerald-400/40 transition-all duration-300"></div>
+                            <div class="relative w-full h-full bg-slate-900 rounded-2xl border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-emerald-400/50 transition-all duration-300 shadow-xl">
+                                <i data-lucide="map" class="w-8 h-8 text-emerald-400"></i>
                             </div>
                         </div>
                         
                         <!-- Content -->
-                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-1 group-hover:text-brand-emerald transition-colors leading-tight">Strategic Local<br>Integration</h4>
-                        <p class="text-brand-emerald font-medium text-xs mb-4 uppercase tracking-wider">Global & Local</p>
+                        <h4 class="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors leading-tight">Strategic Local<br>Integration</h4>
+                        <p class="text-emerald-400 font-medium text-sm mb-4">Global standards, local strength.</p>
                         
-                        <p class="text-slate-400 text-[13px] md:text-sm leading-relaxed mb-8">
-                            Partnering with regional leaders to combine global excellence with deep regulatory compliance and local content mandates.
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            We partner with regional leaders to merge world‑class expertise with <strong class="text-slate-200 font-semibold">deep regulatory alignment</strong> and mandated local content.
                         </p>
-
-                        <!-- Card Footer / Details -->
-                        <div class="mt-auto pt-6 border-t border-white/5">
-                            <ul class="text-slate-400 text-[13px] space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-emerald shrink-0 mt-0.5"></i>
-                                    <span><strong class="text-slate-200">Compliant:</strong> Deep regulatory and legal alignment.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-emerald shrink-0 mt-0.5"></i>
-                                    <span><strong class="text-slate-200">Empowering:</strong> Focused on local content mandates.</span>
-                                </li>
-                            </ul>
+                        
+                        <!-- Card Footer -->
+                        <div class="mt-auto pt-6 border-t border-white/10">
+                            <div class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>Building resilient ecosystems.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -678,14 +637,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html>
-  <!-- philosophy end -->
-
 
       
     <!-- Execution Roadmap Section -->
