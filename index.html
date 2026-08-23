@@ -904,6 +904,47 @@
     </div>
   </section>
 
+  <!-- roadmap scriptt end -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Slider State Map
+    const currentIndices = { 1: 0, 2: 0, 3: 0 };
+
+    function updateSlider(sliderId, totalSlides) {
+      const slider = document.getElementById(`slider-${sliderId}`);
+      if (!slider) return;
+      const index = currentIndices[sliderId];
+      slider.style.transform = `translateX(-${index * 100}%)`;
+
+      // Update indicators
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.querySelector(`.indicator-${sliderId}-${i}`);
+        if (dot) {
+          if (i === index) {
+            dot.classList.remove('bg-white/50');
+            dot.classList.add('bg-white', 'w-3');
+          } else {
+            dot.classList.remove('bg-white', 'w-3');
+            dot.classList.add('bg-white/50', 'w-1.5');
+          }
+        }
+      }
+    }
+
+    function nextSlide(sliderId, totalSlides) {
+      currentIndices[sliderId] = (currentIndices[sliderId] + 1) % totalSlides;
+      updateSlider(sliderId, totalSlides);
+    }
+
+    function prevSlide(sliderId, totalSlides) {
+      currentIndices[sliderId] = (currentIndices[sliderId] - 1 + totalSlides) % totalSlides;
+      updateSlider(sliderId, totalSlides);
+    }
+  </script>
+  <!-- roadmap scriptt end -->
+
   <!-- Track Record Section -->
   <section id="cases" class="py-20 bg-slate-100 relative border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
