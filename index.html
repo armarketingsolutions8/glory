@@ -916,46 +916,6 @@
     </div>
   </section>
 
-  <!-- roadmap scriptt end -->
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Slider State Map
-    const currentIndices = { 1: 0, 2: 0, 3: 0 };
-
-    function updateSlider(sliderId, totalSlides) {
-      const slider = document.getElementById(`slider-${sliderId}`);
-      if (!slider) return;
-      const index = currentIndices[sliderId];
-      slider.style.transform = `translateX(-${index * 100}%)`;
-
-      // Update indicators
-      for (let i = 0; i < totalSlides; i++) {
-        const dot = document.querySelector(`.indicator-${sliderId}-${i}`);
-        if (dot) {
-          if (i === index) {
-            dot.classList.remove('bg-white/50');
-            dot.classList.add('bg-white', 'w-3');
-          } else {
-            dot.classList.remove('bg-white', 'w-3');
-            dot.classList.add('bg-white/50', 'w-1.5');
-          }
-        }
-      }
-    }
-
-    function nextSlide(sliderId, totalSlides) {
-      currentIndices[sliderId] = (currentIndices[sliderId] + 1) % totalSlides;
-      updateSlider(sliderId, totalSlides);
-    }
-
-    function prevSlide(sliderId, totalSlides) {
-      currentIndices[sliderId] = (currentIndices[sliderId] - 1 + totalSlides) % totalSlides;
-      updateSlider(sliderId, totalSlides);
-    }
-  </script>
-  <!-- roadmap scriptt end -->
 
 <section id="cases" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
     
@@ -1061,157 +1021,160 @@
   </section>
   
   <!-- Consortium Section -->
-    <section id="consortium" class="py-24 bg-white relative overflow-hidden">
-        
-        <!-- Decorative Background Blurs -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none z-0">
-            <div class="absolute top-20 left-10 w-96 h-96 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style="animation-duration: 8s;"></div>
-            <div class="absolute top-40 right-10 w-96 h-96 bg-orange-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style="animation-duration: 10s;"></div>
+<section id="consortium" class="py-24 bg-white relative overflow-hidden">
+    
+    <!-- Decorative Background Blurs -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none z-0">
+        <div class="absolute top-20 left-10 w-96 h-96 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style="animation-duration: 8s;"></div>
+        <div class="absolute top-40 right-10 w-96 h-96 bg-orange-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style="animation-duration: 10s;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Section Header -->
+        <div class="reveal text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-block bg-orange-50 border border-orange-100 px-4 py-1.5 rounded-full mb-6 shadow-sm">
+                <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-xs">Partnership Ecosystem</h2>
+            </div>
+
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#183058] mb-6 tracking-tight leading-tight">
+                Consortium Roles & <br class="hidden sm:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-orange-400">Collaboration Structure</span>
+            </h3>
+            
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-medium mb-10">
+                Our consortium framework ensures enduring strength by combining global expertise with local depth. It is designed to deliver:
+            </p>
+            
+            <!-- Features Grid -->
+            <!-- Peningkatan: Mengubah gap-4 menjadi gap-6 agar kartu terlihat lebih bernafas -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left text-sm text-slate-600">
+                <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
+                    <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
+                        <i data-lucide="cpu" class="w-4 h-4 text-[#F29631]"></i> Technical excellence
+                    </strong>
+                    <p class="leading-relaxed">Leveraging advanced technology and specialized engineering to guarantee superior project outcomes.</p>
+                </div>
+                <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
+                    <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-[#F29631]"></i> Local integration
+                    </strong>
+                    <p class="leading-relaxed">Embedding operations within local ecosystems to strengthen community ties and operational resilience.</p>
+                </div>
+                <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
+                    <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
+                        <i data-lucide="scale" class="w-4 h-4 text-[#F29631]"></i> Regulatory compliance
+                    </strong>
+                    <p class="leading-relaxed">Aligning with national frameworks and industry standards to ensure seamless approvals and sustainable execution.</p>
+                </div>
+                <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
+                    <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-[#F29631]"></i> Collaborative resilience
+                    </strong>
+                    <p class="leading-relaxed">Balancing roles between global providers and local partners to safeguard continuity and shared prosperity.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Cards Grid -->
+        <div class="relative grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-stretch">
 
-            <!-- Section Header -->
-            <div class="reveal text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block bg-orange-50 border border-orange-100 px-4 py-1.5 rounded-full mb-6 shadow-sm">
-                    <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-xs">Partnership Ecosystem</h2>
-                </div>
+            <!-- Middle Connector Icon -->
+            <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl border-4 border-slate-50 items-center justify-center z-20 group transition-all hover:scale-110 hover:shadow-orange-200/50 duration-300">
+                <i data-lucide="link" class="text-[#F29631] w-7 h-7 transition-transform duration-500 group-hover:rotate-45"></i>
+            </div>
 
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#183058] mb-6 tracking-tight leading-tight">
-                    Consortium Roles & <br class="hidden sm:block" />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-orange-400">Collaboration Structure</span>
-                </h3>
-                
-                <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-medium mb-10">
-                    Our consortium framework ensures enduring strength by combining global expertise with local depth. It is designed to deliver:
-                </p>
-                
-                <!-- Features Grid -->
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left text-sm text-slate-600">
-                    <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
-                        <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
-                            <i data-lucide="cpu" class="w-4 h-4 text-[#F29631]"></i> Technical excellence
-                        </strong>
-                        <p class="leading-relaxed">Leveraging advanced technology and specialized engineering to guarantee superior project outcomes.</p>
-                    </div>
-                    <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
-                        <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-[#F29631]"></i> Local integration
-                        </strong>
-                        <p class="leading-relaxed">Embedding operations within local ecosystems to strengthen community ties and operational resilience.</p>
-                    </div>
-                    <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
-                        <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
-                            <i data-lucide="scale" class="w-4 h-4 text-[#F29631]"></i> Regulatory compliance
-                        </strong>
-                        <p class="leading-relaxed">Aligning with national frameworks and industry standards to ensure seamless approvals and sustainable execution.</p>
-                    </div>
-                    <div class="p-5 bg-slate-50/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
-                        <strong class="text-[#183058] flex items-center gap-2 mb-2 text-base">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-[#F29631]"></i> Collaborative resilience
-                        </strong>
-                        <p class="leading-relaxed">Balancing roles between global providers and local partners to safeguard continuity and shared prosperity.</p>
+            <!-- Card 1: Glory Asia -->
+            <div class="reveal delay-100 flex flex-col h-full">
+                <div class="h-full flex flex-col bg-gradient-to-br from-[#183058] via-[#1f3d6b] to-[#122442] rounded-[2rem] p-8 md:p-10 text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-white/10">
+                    
+                    <!-- Shine effect -->
+                    <div class="absolute -top-16 -right-16 w-56 h-56 bg-gradient-to-br from-white/10 to-transparent rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
+                    
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/5 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 shrink-0">
+                            <i data-lucide="building-2" class="text-[#F29631] w-8 h-8"></i>
+                        </div>
+                        
+                        <!-- Header Area: Flexbox untuk alignment otomatis -->
+                        <div class="flex flex-col min-h-[7rem] mb-6">
+                            <h4 class="text-2xl md:text-3xl font-black mb-1 tracking-tight">Glory Asia Energy</h4>
+                            <p class="text-blue-200 text-xs mb-3">Powered by Glory Asia Sdn Bhd (1274806D)</p>
+                            <p class="text-[#F29631] text-xs uppercase tracking-widest font-bold mt-auto">Technology & Project Funding</p>
+                        </div>
+                        
+                        <p class="text-blue-100/90 text-sm mb-8 leading-relaxed italic border-l-2 border-[#F29631] pl-4">
+                            "Transforming energy projects with innovation and disciplined capital. We don't just supply solutions, we engineer sustainable growth."
+                        </p>
+
+                        <!-- Pushed to bottom using mt-auto -->
+                        <ul class="space-y-5 text-blue-100/90 text-sm leading-relaxed mt-auto">
+                            <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
+                                <span><strong class="text-white">Advanced BAT:</strong> Delivering cutting-edge Best Available Technology to raise industry standards.</span>
+                            </li>
+                            <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
+                                <span><strong class="text-white">Specialized Equipment:</strong> Precision-engineered tools that maximize upstream and downstream efficiency.</span>
+                            </li>
+                            <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
+                                <span><strong class="text-white">Feasibility Anchored Funding:</strong> Capital structured around detailed case studies, ensuring technical and operational viability.</span>
+                            </li>
+                             <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
+                                <span><strong class="text-white">ROI driven investment:</strong> Funding scaled to projected returns, with milestone-based disbursement to safeguard capital.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Cards Grid -->
-            <div class="relative grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-stretch">
-
-                <!-- Middle Connector Icon (Perfectly centered due to items-stretch) -->
-                <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl border-4 border-slate-50 items-center justify-center z-20 group transition-all hover:scale-110 hover:shadow-orange-200/50 duration-300">
-                    <i data-lucide="link" class="text-[#F29631] w-7 h-7 transition-transform duration-500 group-hover:rotate-45"></i>
-                </div>
-
-                <!-- Card 1: Glory Asia -->
-                <div class="reveal delay-100 h-full">
-                    <div class="h-full bg-gradient-to-br from-[#183058] via-[#1f3d6b] to-[#122442] rounded-[2rem] p-8 md:p-10 text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-white/10 flex flex-col">
-                        
-                        <!-- Shine effect -->
-                        <div class="absolute -top-16 -right-16 w-56 h-56 bg-gradient-to-br from-white/10 to-transparent rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
-                        
-                        <div class="relative z-10 flex-1 flex flex-col">
-                            <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/5 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
-                                <i data-lucide="building-2" class="text-[#F29631] w-8 h-8"></i>
-                            </div>
-                            
-                            <!-- Standardized Title Area -->
-                            <div class="min-h-[6rem] mb-6">
-                                <h4 class="text-2xl md:text-3xl font-black mb-1 tracking-tight">Glory Asia Energy</h4>
-                                <p class="text-blue-200 text-xs mb-3">Powered by Glory Asia Sdn Bhd (1274806D)</p>
-                                <p class="text-[#F29631] text-xs uppercase tracking-widest font-bold">Technology & Project Funding</p>
-                            </div>
-                            
-                            <p class="text-blue-100/90 text-sm mb-8 leading-relaxed italic border-l-2 border-[#F29631] pl-4">
-                                "Transforming energy projects with innovation and disciplined capital. We don't just supply solutions, we engineer sustainable growth."
-                            </p>
-
-                            <ul class="space-y-5 text-blue-100/90 text-sm leading-relaxed mt-auto">
-                                <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
-                                    <span><strong class="text-white">Advanced BAT:</strong> Delivering cutting-edge Best Available Technology to raise industry standards.</span>
-                                </li>
-                                <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
-                                    <span><strong class="text-white">Specialized Equipment:</strong> Precision-engineered tools that maximize upstream and downstream efficiency.</span>
-                                </li>
-                                <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
-                                    <span><strong class="text-white">Feasibility Anchored Funding:</strong> Capital structured around detailed case studies, ensuring technical and operational viability.</span>
-                                </li>
-                                 <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover/item:text-[#F29631] transition-colors"></i>
-                                    <span><strong class="text-white">ROI driven investment:</strong> Funding scaled to projected returns, with milestone-based disbursement to safeguard capital.</span>
-                                </li>
-                            </ul>
+            <!-- Card 2: Local Partners -->
+            <div class="reveal delay-200 flex flex-col h-full">
+                <div class="h-full flex flex-col bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                    
+                    <!-- Subtle background glow -->
+                    <div class="absolute -top-16 -right-16 w-56 h-56 bg-gradient-to-br from-orange-50 to-slate-50 rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
+                    
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:bg-orange-50 transition-all duration-300 shrink-0">
+                            <i data-lucide="users" class="text-[#5176A2] w-8 h-8"></i>
                         </div>
+                        
+                        <!-- Header Area: Flexbox untuk alignment otomatis (Tanpa spacer transparan) -->
+                        <div class="flex flex-col min-h-[7rem] mb-6">
+                            <h4 class="text-2xl md:text-3xl font-black text-[#183058] mb-1 tracking-tight">Local Partners</h4>
+                            <!-- Spacer transparan dihapus, diganti dengan mt-auto pada elemen di bawahnya agar posisi sejajar dengan kartu sebelahnya -->
+                            <p class="text-[#5176A2] text-xs uppercase tracking-widest font-bold mt-auto">Local Content & Operations</p>
+                        </div>
+                        
+                         <p class="text-slate-600 text-sm mb-8 leading-relaxed italic border-l-2 border-[#5176A2] pl-4">
+                            "Anchoring global projects with local strength. Our partner network ensures every initiative is firmly rooted in the local landscape, combining compliance, execution, and strategic impact."
+                        </p>
+
+                        <!-- Pushed to bottom using mt-auto -->
+                        <ul class="space-y-5 text-slate-600 text-sm leading-relaxed mt-auto">
+                            <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5 group-hover/item:text-[#183058] transition-colors"></i>
+                                <span><strong class="text-[#183058]">Strategic project access:</strong> Securing priority opportunities that align with national growth agendas.</span>
+                            </li>
+                            <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5 group-hover/item:text-[#183058] transition-colors"></i>
+                                <span><strong class="text-[#183058]">Regulatory alignment:</strong> Navigating government licensing and compliance frameworks with precision.</span>
+                            </li>
+                            <li class="flex items-start gap-3 group/item">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5 group-hover/item:text-[#183058] transition-colors"></i>
+                                <span><strong class="text-[#183058]">Operational excellence:</strong> Managing execution and logistics seamlessly to guarantee delivery and continuity.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- Card 2: Local Partners -->
-                <div class="reveal delay-200 h-full">
-                    <div class="h-full bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 flex flex-col">
-                        
-                        <!-- Subtle background glow -->
-                        <div class="absolute -top-16 -right-16 w-56 h-56 bg-gradient-to-br from-orange-50 to-slate-50 rounded-full group-hover:scale-110 transition-transform duration-700 blur-2xl"></div>
-                        
-                        <div class="relative z-10 flex-1 flex flex-col">
-                            <div class="bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:bg-orange-50 transition-all duration-300">
-                                <i data-lucide="users" class="text-[#5176A2] w-8 h-8"></i>
-                            </div>
-                            
-                            <!-- Standardized Title Area -->
-                            <div class="min-h-[6rem] mb-6">
-                                <h4 class="text-2xl md:text-3xl font-black text-[#183058] mb-1 tracking-tight">Local Partners</h4>
-                                <p class="text-transparent text-xs mb-3 select-none" aria-hidden="true">Spacer for alignment</p>
-                                <p class="text-[#5176A2] text-xs uppercase tracking-widest font-bold">Local Content & Operations</p>
-                            </div>
-                            
-                             <p class="text-slate-600 text-sm mb-8 leading-relaxed italic border-l-2 border-[#5176A2] pl-4">
-                                "Anchoring global projects with local strength. Our partner network ensures every initiative is firmly rooted in the local landscape, combining compliance, execution, and strategic impact."
-                            </p>
-
-                            <ul class="space-y-5 text-slate-600 text-sm leading-relaxed mt-auto">
-                                <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5 group-hover/item:text-[#183058] transition-colors"></i>
-                                    <span><strong class="text-[#183058]">Strategic project access:</strong> Securing priority opportunities that align with national growth agendas.</span>
-                                </li>
-                                <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5 group-hover/item:text-[#183058] transition-colors"></i>
-                                    <span><strong class="text-[#183058]">Regulatory alignment:</strong> Navigating government licensing and compliance frameworks with precision.</span>
-                                </li>
-                                <li class="flex items-start gap-3 group/item">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 shrink-0 mt-0.5 group-hover/item:text-[#183058] transition-colors"></i>
-                                    <span><strong class="text-[#183058]">Operational excellence:</strong> Managing execution and logistics seamlessly to guarantee delivery and continuity.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
               
 
 
@@ -1843,15 +1806,6 @@
     </div>
   </section>
 
-
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="reveal text-center max-w-2xl mx-auto mb-12">
-                <div class="inline-block bg-orange-100 px-3 py-1.5 rounded-full mb-4">
-                    <h2 class="text-[#F29631] font-bold tracking-widest uppercase text-[10px]">Operation Structure</h2>
-                </div>
-        <<h3 class="text-4xl md:text-5xl font-black text-[#183058] mb-6 tracking-tight leading-tight">
-                    Deployment <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-orange-300">Roadmap</span>
-                </h3> 
   <!-- Deployment Roadmap Section -->
   <section class="py-20 bg-slate-100 relative border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
