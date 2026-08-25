@@ -922,6 +922,57 @@
     </div>
   </section>
 
+  <!-- consortium script -->
+  <script>
+  // Objek untuk menyimpan kedudukan (index) slide semasa bagi setiap slider
+  const currentSlides = {
+    1: 0,
+    2: 0,
+    3: 0
+  };
+
+  // Fungsi untuk mengemas kini paparan slider dan titik penunjuk (indicators)
+  function updateSlider(sliderId, totalSlides) {
+    const slider = document.getElementById(`slider-${sliderId}`);
+    const currentSlide = currentSlides[sliderId];
+    
+    // Gerakkan gambar menggunakan CSS transform (translateX)
+    if (slider) {
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Kemas kini titik penunjuk (indicator dots) di bahagian bawah
+    for (let i = 0; i < totalSlides; i++) {
+      const indicator = document.querySelector(`.indicator-${sliderId}-${i}`);
+      if (indicator) {
+        if (i === currentSlide) {
+          indicator.classList.remove('bg-white/50');
+          indicator.classList.add('bg-white');
+        } else {
+          indicator.classList.remove('bg-white');
+          indicator.classList.add('bg-white/50');
+        }
+      }
+    }
+  }
+
+  // Fungsi butang "Seterusnya" (Right Arrow)
+  function nextSlide(sliderId, totalSlides) {
+    // Tambah 1. Jika dah sampai hujung, kembali ke gambar pertama (0)
+    currentSlides[sliderId] = (currentSlides[sliderId] + 1) % totalSlides;
+    updateSlider(sliderId, totalSlides);
+  }
+
+  // Fungsi butang "Sebelumnya" (Left Arrow)
+  function prevSlide(sliderId, totalSlides) {
+    // Tolak 1. Jika di gambar pertama, pergi ke gambar terakhir
+    currentSlides[sliderId] = (currentSlides[sliderId] - 1 + totalSlides) % totalSlides;
+    updateSlider(sliderId, totalSlides);
+  }
+</script>
+<!-- consortium script -->
+
+
 
 <section id="cases" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
     
